@@ -18,7 +18,7 @@ function App() {
 
   const actionCards = [
     {
-      title: 'Govt Documents',
+      title: 'View Documents',
       subtitle: 'Browse records',
       icon: '📄',
     },
