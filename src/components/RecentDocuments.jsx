@@ -6,10 +6,10 @@ function RecentDocuments({ recentDocs }) {
       <div className="panel-header">
         <div>
           <p className="panel-label">
-            Recent Documents
+            <h3>Recent Documents</h3>
           </p>
 
-          <h2>Saved records in your vault</h2>
+          
         </div>
 
         <button className="link-button">
