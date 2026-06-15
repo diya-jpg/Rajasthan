@@ -3,21 +3,26 @@ import "./StorageWidget.css";
 function StorageWidget() {
   return (
     <div className="storage-widget">
-      <div className="storage-header">
-        <span>🌿 Storage Usage</span>
-        <span>23.32 MB</span>
+
+      <div className="storage-title">
+        Storage
       </div>
 
-      <div className="storage-bar">
+      <div className="storage-progress">
         <div
-          className="storage-progress"
-          style={{ width: "4.6%" }}
-        />
+          className="storage-progress-fill"
+          style={{ width: "35%" }}
+        ></div>
       </div>
 
-      <div className="storage-info">
-        23.32 MB of 512 MB used
-      </div>
+      <p className="storage-text">
+        3.5 GB of 10 GB used
+      </p>
+
+      <button className="storage-btn">
+        Get More Storage
+      </button>
+
     </div>
   );
 }

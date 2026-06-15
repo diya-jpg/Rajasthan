@@ -1,10 +1,11 @@
 .topbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-margin-bottom: 28px;
+  gap: 20px;
+
+  margin-bottom: 28px;
 }
 
 /* ==========================
@@ -12,89 +13,181 @@ SEARCH BAR
 ========================== */
 
 .search-wrapper {
-flex: 1;
+  flex: 1;
 
-display: flex;
-align-items: center;
-gap: 12px;
+  max-width: 700px;
 
-height: 62px;
-padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-background: #ffffff;
+  height: 54px;
 
-border: 1px solid #dbeafe;
-border-radius: 20px;
+  padding: 0 18px;
 
-box-shadow:
-0 8px 24px rgba(59,130,246,0.08);
+  background: rgba(255,255,255,0.55);
 
-transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+
+  border: 1px solid #d7e9f5;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+
+  transition: all 0.25s ease;
 }
 
 .search-wrapper:hover {
-border-color: #93c5fd;
+  border-color: #b7dced;
 }
 
 .search-wrapper:focus-within {
-border-color: #3b82f6;
+  border-color: #ADD8E6;
 
-box-shadow:
-0 10px 30px rgba(59,130,246,0.18);
+  box-shadow: 0 6px 16px rgba(173,216,230,0.18);
 }
 
 .search-icon {
-font-size: 18px;
-color: #3b82f6;
+  font-size: 18px;
+
+  color: #64748b;
 }
 
 .search-wrapper input {
-width: 100%;
+  width: 100%;
 
-border: none;
-outline: none;
-background: transparent;
+  border: none;
+  outline: none;
 
-font-size: 15px;
-font-weight: 500;
+  background: transparent;
 
-color: #0f172a;
+  color: #1e3a5f;
+
+  font-size: 14px;
 }
 
 .search-wrapper input::placeholder {
-color: #94a3b8;
+  color: #94a3b8;
 }
 
 /* ==========================
-STATUS BADGE
+RIGHT SECTION
 ========================== */
 
-.top-status {
-height: 54px;
+.topbar-right {
+  display: flex;
+  align-items: center;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  gap: 18px;
+}
 
-padding: 0 20px;
+/* ==========================
+NOTIFICATION
+========================== */
 
-background: linear-gradient(
-135deg,
-#5b7cff,
-#65d6f5
-);
+/* ==========================
+NOTIFICATION
+========================== */
 
-color: white;
+.notification-btn {
+  position: relative;
 
-border-radius: 999px;
+  width: 42px;
+  height: 42px;
 
-font-size: 14px;
-font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-white-space: nowrap;
+  border: none;
+  background: transparent;
 
-box-shadow:
-0 8px 20px rgba(91,124,255,0.25);
+  color: #64748b;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.notification-btn:hover {
+  color: #1e3a5f;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 6px;
+  right: 6px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+
+  border: 2px solid #ffffff;
+}
+/* ==========================
+PROFILE
+========================== */
+
+.user-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-left: 18px;
+
+  border-left: 1px solid #e2e8f0;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #1e3a5f,
+    #2c5282
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.15);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info strong {
+  color: #0f172a;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-info span {
+  color: #64748b;
+
+  font-size: 11px;
 }
 
 /* ==========================
@@ -102,14 +195,19 @@ TABLET
 ========================== */
 
 @media (max-width: 980px) {
-.topbar {
-flex-direction: column;
-align-items: stretch;
-}
+  .topbar {
+    flex-direction: column;
 
-.top-status {
-align-self: flex-start;
-}
+    align-items: stretch;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+
+  .topbar-right {
+    justify-content: flex-end;
+  }
 }
 
 /* ==========================
@@ -117,13 +215,19 @@ MOBILE
 ========================== */
 
 @media (max-width: 640px) {
-.search-wrapper {
-height: 54px;
-padding: 0 16px;
-}
+  .search-wrapper {
+    height: 50px;
 
-.top-status {
-width: 100%;
-justify-content: center;
-}
+    padding: 0 14px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .user-profile {
+    border-left: none;
+
+    padding-left: 0;
+  }
 }

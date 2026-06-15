@@ -1,0 +1,130 @@
+.gov-row {
+  display: grid;
+
+  grid-template-columns:
+    2.5fr
+    1fr
+    0.8fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  transition: all 0.25s ease;
+}
+
+.gov-row:hover {
+  background: #f1f5f9;
+}
+
+.gov-row:last-child {
+  border-bottom: none;
+}
+
+.doc-details h4 {
+  margin: 0;
+
+  color: #1e3a5f;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.doc-details p {
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.verified-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+
+  color: #166534;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doc-size,
+.doc-date {
+  color: #475569;
+
+  font-size: 13px;
+}
+
+.doc-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+.doc-actions button {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.doc-actions button:hover {
+  background: #f1f5f9;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+  .gov-row {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .doc-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .gov-row {
+    padding: 14px;
+  }
+
+  .doc-details h4 {
+    font-size: 14px;
+  }
+
+  .doc-details p {
+    font-size: 11px;
+  }
+}

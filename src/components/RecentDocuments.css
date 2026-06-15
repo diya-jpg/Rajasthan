@@ -1,150 +1,213 @@
 .recent-panel {
-background: #ffffff;
+  background: #f4fbff;
 
-border-radius: 22px;
+  border-radius: 22px;
 
-padding: 20px;
+  padding: 20px;
 
-border: 1px solid #dbeafe;
+  border: 1px solid #cae9f5;
 
-box-shadow:
-0 8px 24px rgba(59,130,246,0.08);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .panel-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .panel-label {
-margin: 0;
+  margin: 0;
 
-color: #2563eb;
+  color: #64748b;
 
-font-size: 11px;
-font-weight: 700;
+  font-size: 11px;
+  font-weight: 700;
 
-text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .panel-header h2 {
-margin-top: 4px;
+  margin-top: 4px;
 
-color: #0f172a;
+  color: #1e3a5f;
 
-font-size: 30px;
-font-weight: 700;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .link-button {
-border: none;
+  border: 1px solid #cae9f5;
 
-background: linear-gradient(
-90deg,
-#5b7cff,
-#65d6f5
-);
+  background: #ffffff;
 
-color: white;
+  color: #1e3a5f;
 
-padding: 12px 18px;
+  padding: 10px 16px;
 
-border-radius: 14px;
+  border-radius: 12px;
 
-cursor: pointer;
+  cursor: pointer;
 
-font-weight: 600;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.link-button:hover {
+  background: #eef7fc;
 }
 
 .document-list {
-display: flex;
-flex-direction: column;
-gap: 14px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
 }
 
 .document-row {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-padding: 16px;
+  padding: 16px;
 
-border-radius: 18px;
+  border-radius: 18px;
 
-border: 1px solid #dbeafe;
+  border: 1px solid #d7e9f5;
 
-background: #ffffff;
+  background: #ffffff;
 
-transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .document-row:hover {
-transform: translateY(-2px);
+  transform: translateY(-2px);
 
-box-shadow:
-0 10px 20px rgba(59,130,246,0.1);
+   background: #e5e7eb;
+  border-color: #dbe4ee;
+
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
 }
 
 .document-title {
-margin: 0;
+  margin: 0;
 
-color: #0f172a;
+  color: #1e293b;
 
-font-size: 15px;
-font-weight: 700;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .document-subtitle {
-margin-top: 4px;
+  margin-top: 4px;
 
-color: #64748b;
+  color: #64748b;
 
-font-size: 12px;
+  font-size: 12px;
 }
 
 .document-meta {
-display: flex;
-align-items: center;
-gap: 16px;
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
 }
 
 .document-meta span {
-color: #475569;
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .doc-actions {
-display: flex;
-gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .doc-actions button {
-width: 36px;
-height: 36px;
+  width: 36px;
+  height: 36px;
 
-border: none;
+  border: 1px solid #d7e9f5;
 
-border-radius: 12px;
+  border-radius: 12px;
 
-background: #eff6ff;
+  background: #ffffff;
 
-cursor: pointer;
+  color: #1e3a5f;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
 }
 
 .doc-actions button:hover {
-background: #dbeafe;
+  background: #eef7fc;
 }
+
+/* ==========================
+TABLET
+========================== */
 
 @media (max-width: 768px) {
-.document-row {
-flex-direction: column;
-align-items: flex-start;
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .document-row {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .document-meta {
+    width: 100%;
+
+    justify-content: space-between;
+  }
 }
 
-.document-meta {
-width: 100%;
-justify-content: space-between;
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .recent-panel {
+    padding: 16px;
+
+    border-radius: 18px;
+  }
+
+  .panel-header h2 {
+    font-size: 22px;
+  }
+
+ .document-title {
+  font-size: 15px;
+  font-weight: 600;
 }
+  .document-subtitle {
+    font-size: 11px;
+  }
+
+  .document-meta span {
+    font-size: 11px;
+  }
+
+  .doc-actions button {
+    width: 32px;
+    height: 32px;
+  }
 }

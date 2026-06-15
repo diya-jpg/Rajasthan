@@ -1,8 +1,7 @@
 /* * {
   outline: 1px solid red;
 } */
-
-:root {
+ /* :root {
   --bg: #f4f8fc;
   --panel-bg: #ffffff;
   --panel-border: #dbeafe;
@@ -19,7 +18,28 @@
   --radius: 22px;
   --radius-sm: 16px;
 }
+ */
 
+:root {
+  --bg: #edf6fc;
+
+  --panel-bg: #ffffff;
+  --panel-border: #d7e9f5;
+
+  --text: #1e3a5f;
+  --text-strong: #0f172a;
+
+  --muted: #64748b;
+
+  --accent: #0b2f66;
+
+  --surface: #cae9f5;
+
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+
+  --radius: 24px;
+  --radius-sm: 18px;
+}
 * {
   box-sizing: border-box;
 }
@@ -32,7 +52,7 @@ body,
   overflow-x: hidden;
 }
 
-body {
+/* body {
   background: linear-gradient(
     180deg,
     #f8fbff 0%,
@@ -45,8 +65,22 @@ body {
     "Segoe UI",
     system-ui,
     sans-serif;
-}
+} */
+body {
+  background: linear-gradient(
+    180deg,
+    #edf6fc 0%,
+    #e8f3fb 50%,
+    #edf6fc 100%
+  );
 
+  color: var(--text);
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
 .app-shell {
   display: grid;
 

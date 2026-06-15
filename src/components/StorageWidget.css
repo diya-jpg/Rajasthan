@@ -1,91 +1,107 @@
+/* ==========================
+STORAGE WIDGET
+========================== */
+
 .storage-widget {
-  margin-top: 20px;
-  padding: 16px;
-  border-radius: 18px;
+  margin-top: 24px;
 
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(101,214,245,0.15);
+  padding-top: 20px;
 
-  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(100, 116, 139, 0.15);
 }
 
-.storage-header {
-  display: flex;
-  justify-content: space-between;
+.storage-title {
+  color: #1e3a5f;
 
-  color: white;
+  font-size: 15px;
+  font-weight: 700;
 
-  font-size: 13px;
-  font-weight: 600;
-
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
-.storage-bar {
-  height: 8px;
+.storage-progress {
+  height: 6px;
 
-  background: rgba(255,255,255,0.15);
+  background: rgba(148, 163, 184, 0.25);
 
   border-radius: 999px;
 
   overflow: hidden;
+
+  margin-bottom: 14px;
 }
 
-.storage-progress {
+.storage-progress-fill {
   height: 100%;
 
   background: linear-gradient(
     90deg,
-    #5b7cff,
-    #65d6f5
+    #1e3a5f,
+    #3b82f6
   );
 
   border-radius: inherit;
 }
 
-.storage-info {
-  margin-top: 10px;
+.storage-text {
+  margin: 0 0 18px;
 
-  color: rgba(255,255,255,0.75);
+  color: #64748b;
 
-  font-size: 12px;
+  font-size: 13px;
+
+  line-height: 1.5;
 }
 
-/* =====================
-   TABLET
-===================== */
+.storage-btn {
+  width: 100%;
 
-@media (max-width: 768px) {
-  .storage-widget {
-    padding: 14px;
+  height: 44px;
+
+  border-radius: 999px;
+
+  border: 1px solid #94a3b8;
+
+  background: #ffffff;
+
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.storage-btn:hover {
+  background: #f8fafc;
+
+  border-color: #60a5fa;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+  .storage-btn {
+    font-size: 13px;
   }
 
-  .storage-header {
+  .storage-text {
     font-size: 12px;
   }
-
-  .storage-info {
-    font-size: 11px;
-  }
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* ==========================
+MOBILE
+========================== */
 
-@media (max-width: 480px) {
+@media (max-width: 840px) {
+
   .storage-widget {
-    padding: 12px;
-    border-radius: 14px;
-  }
-
-  .storage-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .storage-info {
-    font-size: 10px;
+    display: none;
   }
 }

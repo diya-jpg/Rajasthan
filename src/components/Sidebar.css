@@ -1,170 +1,23 @@
-/* .sidebar {
+.sidebar {
   width: 280px;
   min-width: 280px;
   min-height: 100vh;
 
   background: linear-gradient(
     180deg,
-    #0f172a 0%,
-    #172554 50%,
-    #1e3a8a 100%
+    #CAE9F5 0%,
+    #BFE3F2 100%
   );
 
-  color: #ffffff;
+  color: #0f172a;
+
   padding: 24px 18px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  box-sizing: border-box;
-  border-right: 1px solid rgba(255,255,255,0.08);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 40px;
-}
-
-.brand-mark {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(
-    135deg,
-    #3b82f6,
-    #2563eb
-  );
-
-  color: white;
-  font-size: 22px;
-  font-weight: 700;
-
-  box-shadow: 0 10px 30px rgba(59,130,246,0.35);
-}
-
-.brand-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.brand-subtitle {
-  font-size: 12px;
-  color: rgba(255,255,255,0.7);
-}
-
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.nav-item {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  padding: 14px 16px;
-
-  border: none;
-  border-radius: 14px;
-
-  background: transparent;
-  color: rgba(255,255,255,0.85);
-
-  cursor: pointer;
-
-  transition: all 0.25s ease;
-}
-
-.nav-item:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateX(4px);
-}
-
-.nav-item.active {
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #3b82f6
-  );
-
-  color: #fff;
-
-  box-shadow: 0 8px 24px rgba(37,99,235,0.35);
-}
-
-.nav-icon {
-  font-size: 18px;
-  width: 20px;
-}
-
-.sidebar-footer {
-  margin-top: 24px;
-
-  padding: 16px;
-  border-radius: 16px;
-
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-
-  font-size: 13px;
-}
-
-.footer-note {
-  margin-top: 8px;
-  opacity: 0.7;
-}
-
-@media (max-width: 1024px) {
-  .sidebar {
-    width: 240px;
-    min-width: 240px;
-  }
-}
-
-@media (max-width: 840px) {
-  .sidebar {
-    width: 100%;
-    min-width: 100%;
-    min-height: auto;
-  }
-
-  .sidebar-footer {
-    display: none;
-  }
-} */
- .sidebar {
-  width: 280px;
-  min-width: 280px;
-  min-height: 100vh;
-
-  background: linear-gradient(
-    180deg,
-    #0e1a3b 0%,
-    #162b6f 55%,
-    #1d4ed8 100%
-  );
-
-  color: #ffffff;
-  padding: 24px 18px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  border-right: 1px solid rgba(101, 214, 245, 0.15);
-  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #ADD8E6;
 }
 
 /* ======================
@@ -175,13 +28,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-bottom: 35px;
 }
 
 .brand-logo {
   width: 180px;
+
   height: auto;
+
   object-fit: contain;
+
   filter: drop-shadow(
     0 0 20px rgba(101, 214, 245, 0.35)
   );
@@ -194,7 +51,9 @@
 .nav-menu {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
+
   flex: 1;
 }
 
@@ -203,6 +62,7 @@
 
   display: flex;
   align-items: center;
+
   gap: 14px;
 
   padding: 14px 16px;
@@ -212,39 +72,50 @@
 
   background: transparent;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: #1e3a5f;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
 
   transition: all 0.3s ease;
+
   cursor: pointer;
 }
 
 .nav-icon {
   font-size: 18px;
+
   width: 20px;
+
+  flex-shrink: 0;
 }
 
 /* Hover */
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(101, 214, 245, 0.15);
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #0f172a;
+
+  border: 1px solid rgba(147, 197, 253, 0.15);
+
   transform: translateX(5px);
 }
 
 /* Active Menu */
 
 .nav-item.active {
-  background: linear-gradient(
-    90deg,
-    #5b7cff,
-    #65d6f5
-  );
+  background: #ffffff;
 
-  color: #ffffff;
+  color: #0f172a;
 
-  box-shadow:
-    0 0 20px rgba(101, 214, 245, 0.35),
-    0 8px 24px rgba(91, 124, 255, 0.3);
+  font-weight: 600;
+
+  border: 1px solid rgba(147, 197, 253, 0.15);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* ======================
@@ -252,25 +123,29 @@
 ====================== */
 
 .sidebar-footer {
-  margin-top: 24px;
+  margin-top: auto;
 
-  padding: 18px;
+  padding-top: 16px;
 
-  border-radius: 18px;
+  border-top: 1px solid rgba(100, 116, 139, 0.15);
 
-  background: rgba(255, 255, 255, 0.08);
+  background: transparent;
+}
 
-  backdrop-filter: blur(14px);
+.sidebar-footer > div:first-child {
+  color: #94a3b8;
 
-  border: 1px solid rgba(101, 214, 245, 0.15);
-
-  color: #d8e7ff;
   font-size: 13px;
+  font-weight: 500;
 }
 
 .footer-note {
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 600;
 }
 
 /* ======================
@@ -296,7 +171,9 @@
   .sidebar {
     width: 100%;
     min-width: 100%;
+
     min-height: auto;
+
     padding: 16px;
   }
 
@@ -338,3 +215,102 @@
     font-size: 16px;
   }
 }
+/* ======================
+   STORAGE INLINE
+====================== */
+
+.storage-inline {
+  margin-top: 18px;
+
+  padding: 12px 6px 0;
+}
+
+.storage-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #1e3a5f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.storage-icon {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+
+.storage-bar {
+  height: 8px;
+
+  background: rgba(148, 163, 184, 0.2);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.storage-fill {
+  width: 35%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #1d4ed8,
+    #3b82f6
+  );
+
+  border-radius: inherit;
+}
+
+.storage-text {
+  margin-top: 12px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 1024px) {
+
+  .storage-label {
+    font-size: 13px;
+  }
+
+  .storage-icon {
+    font-size: 16px;
+  }
+
+ 
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 840px) {
+
+  .storage-inline {
+    margin-top: 12px;
+  }
+}
+.footer-security {
+  color: #94a3b8;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+

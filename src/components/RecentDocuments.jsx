@@ -4,17 +4,13 @@ function RecentDocuments({ recentDocs }) {
   return (
     <section className="recent-panel">
       <div className="panel-header">
-        <div>
-          <p className="panel-label">
-            <h3>Recent Documents</h3>
-          </p>
 
-          
-        </div>
+        <h2>Recent Documents</h2>
 
         <button className="link-button">
           View all →
         </button>
+
       </div>
 
       <div className="document-list">

@@ -1,0 +1,51 @@
+.gov-page {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* ==========================
+PAGE ANIMATION
+========================== */
+
+.gov-page > * {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .gov-page {
+    gap: 16px;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .gov-page {
+    gap: 14px;
+  }
+}
