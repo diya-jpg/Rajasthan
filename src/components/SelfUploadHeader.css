@@ -2,42 +2,38 @@
 HEADER
 ========================== */
 
-.gov-header {
+.self-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 24px;
-
-   margin-bottom: 0;
- 
 }
 
-.gov-header-left h1 {
-   margin: 0;
+.self-header-left h1 {
+  margin: 0;
 
   color: #1e3a5f;
 
   font-size: 28px;
-
   font-weight: 700;
 
-  line-height: 1.2;
+  white-space: nowrap;
 }
 
-.gov-header-left p {
+.self-header-left p {
   margin-top: 8px;
 
   color: #64748b;
 
-  font-size: 15px;
+  font-size: 14px;
 
   line-height: 1.6;
 
   max-width: 650px;
 }
 
-.gov-header-right {
+.self-header-right {
   display: flex;
   align-items: center;
 
@@ -47,46 +43,22 @@ HEADER
 }
 
 /* ==========================
-LAST SYNC
+SECONDARY BUTTON
 ========================== */
 
-.last-sync {
-  display: flex;
-  flex-direction: column;
-
-  text-align: right;
-}
-
-.last-sync span {
-  color: #64748b;
-
-  font-size: 12px;
-
-  font-weight: 500;
-}
-
-.last-sync strong {
-  color: #1e3a5f;
-
-  font-size: 13px;
-
-  font-weight: 700;
-}
-
-/* ==========================
-SYNC BUTTON
-========================== */
-
-.sync-btn {
+.secondary-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 
   gap: 8px;
 
-  padding: 12px 18px;
+  height: 46px;
 
-  border: 1px solid #dbeafe;
+  padding: 0 18px;
+
+  border: 1px solid #dbe4ee;
+
   border-radius: 12px;
 
   background: #ffffff;
@@ -101,26 +73,27 @@ SYNC BUTTON
   transition: all 0.25s ease;
 }
 
-.sync-btn:hover {
+.secondary-btn:hover {
   background: #f8fafc;
-
-  border-color: #7dbad4;
 }
 
 /* ==========================
-FETCH BUTTON
+PRIMARY BUTTON
 ========================== */
 
-.fetch-docs-btn {
+.primary-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 
   gap: 8px;
 
-  padding: 12px 20px;
+  height: 46px;
+
+  padding: 0 20px;
 
   border: none;
+
   border-radius: 12px;
 
   background: #1e3a5f;
@@ -135,23 +108,8 @@ FETCH BUTTON
   transition: all 0.25s ease;
 }
 
-.fetch-docs-btn:hover {
+.primary-btn:hover {
   background: #16304f;
-}
-
-/* ==========================
-LARGE TABLET
-========================== */
-
-@media (max-width: 1200px) {
-
-  .gov-header-left h1 {
-    font-size: 30px;
-  }
-
-  .gov-header-right {
-    gap: 10px;
-  }
 }
 
 /* ==========================
@@ -160,58 +118,16 @@ TABLET
 
 @media (max-width: 1024px) {
 
-  .gov-header {
+  .self-header {
     flex-direction: column;
 
     align-items: flex-start;
   }
 
-  .gov-header-right {
+  .self-header-right {
     width: 100%;
 
     flex-wrap: wrap;
-
-    justify-content: flex-start;
-  }
-
-  .gov-header-left h1 {
-    font-size: 28px;
-  }
-
-  .gov-header-left p {
-    font-size: 14px;
-  }
-
-  .last-sync {
-    text-align: left;
-  }
-}
-
-/* ==========================
-SMALL TABLET
-========================== */
-
-@media (max-width: 768px) {
-
-  .gov-header-left h1 {
-    font-size: 24px;
-  }
-
-  .gov-header-left p {
-    font-size: 14px;
-  }
-
-  .gov-header-right {
-    flex-direction: column;
-
-    align-items: stretch;
-
-    width: 100%;
-  }
-
-  .sync-btn,
-  .fetch-docs-btn {
-    width: 100%;
   }
 }
 
@@ -219,32 +135,37 @@ SMALL TABLET
 MOBILE
 ========================== */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
-  .gov-header {
-    gap: 18px;
+  .self-header-left h1 {
+    font-size: 24px;
   }
 
-  .gov-header-left h1 {
+  .self-header-right {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================
+SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .self-header-left h1 {
     font-size: 22px;
   }
 
-  .gov-header-left p {
-    font-size: 13px;
-  }
-
-  .last-sync span {
-    font-size: 11px;
-  }
-
-  .last-sync strong {
-    font-size: 12px;
-  }
-
-  .sync-btn,
-  .fetch-docs-btn {
-    padding: 10px 14px;
-
+  .self-header-left p {
     font-size: 13px;
   }
 }

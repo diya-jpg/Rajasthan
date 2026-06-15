@@ -1,0 +1,138 @@
+.self-filter-bar {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+}
+
+/* ==========================
+SEARCH
+========================== */
+
+.self-search-box {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  height: 48px;
+
+  padding: 0 16px;
+
+  border: 1px solid #dbe4ee;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+.self-search-box:focus-within {
+  border-color: #7dbad4;
+
+  box-shadow: 0 0 0 4px rgba(125,186,212,0.15);
+}
+
+.self-search-icon {
+  color: #64748b;
+
+  font-size: 18px;
+}
+
+.self-search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #1e3a5f;
+
+  font-size: 14px;
+}
+
+.self-search-box input::placeholder {
+  color: #94a3b8;
+}
+
+/* ==========================
+SELECTS
+========================== */
+
+.self-filter-bar select {
+  height: 48px;
+
+  min-width: 170px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dbe4ee;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+  .self-filter-bar {
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .self-filter-bar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .self-filter-bar select {
+    min-width: 100%;
+  }
+}
+
+/* ==========================
+SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .self-filter-bar {
+    padding: 14px;
+  }
+
+  .self-search-box,
+  .self-filter-bar select {
+    height: 44px;
+  }
+}

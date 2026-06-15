@@ -1,0 +1,100 @@
+.shared-row {
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1.5fr
+    1fr
+    1fr
+    1fr
+    1.5fr;
+
+  padding: 18px;
+
+  align-items: center;
+
+  border-top: 1px solid #e2e8f0;
+
+  transition: all 0.25s ease;
+}
+
+.shared-row:hover {
+  background: #e5e7eb;
+}
+
+.shared-doc h4 {
+  margin: 0;
+
+  color: #1e3a5f;
+}
+
+.shared-doc p {
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.active-badge {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+
+  color: #166534;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.expired-badge {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: #e5e7eb;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.shared-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+.shared-actions button {
+  height: 36px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.revoke-btn {
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width:768px) {
+
+  .shared-row {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+}

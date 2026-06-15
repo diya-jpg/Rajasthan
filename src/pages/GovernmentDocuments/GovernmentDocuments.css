@@ -3,7 +3,7 @@
 
   flex-direction: column;
 
-  gap: 20px;
+  gap: 24px;
 
   width: 100%;
 }
@@ -35,8 +35,9 @@ TABLET
 ========================== */
 
 @media (max-width: 768px) {
+
   .gov-page {
-    gap: 16px;
+    gap: 18px;
   }
 }
 
@@ -45,6 +46,7 @@ MOBILE
 ========================== */
 
 @media (max-width: 480px) {
+
   .gov-page {
     gap: 14px;
   }

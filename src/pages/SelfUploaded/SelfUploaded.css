@@ -1,0 +1,31 @@
+.self-uploaded-page {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+  .self-uploaded-page {
+    gap: 16px;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .self-uploaded-page {
+    gap: 14px;
+  }
+}

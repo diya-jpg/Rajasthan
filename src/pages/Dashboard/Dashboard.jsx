@@ -35,7 +35,7 @@ function Dashboard() {
       icon: <FiShare2 />,
     },
     {
-  title: "Sync Documents",
+  title: "Sync Digilocker",
   subtitle: "Keep documents updated",
   icon: <FiRefreshCw />,
 },

@@ -1,33 +1,41 @@
 import "./GovFilterBar.css";
+import { FiSearch, FiFilter } from "react-icons/fi";
 
 function GovFilterBar() {
   return (
     <div className="gov-filter-bar">
 
       <div className="search-box">
+        <FiSearch className="search-icon" />
+
         <input
           type="text"
-          placeholder="Search by document name, certificate number..."
+          placeholder="Search by document name, certificate number, department..."
         />
       </div>
 
-      <select>
-        <option>All Departments</option>
-        <option>Education Department</option>
-        <option>Transport Department</option>
-        <option>UIDAI</option>
-        <option>Revenue Department</option>
-      </select>
+      <div className="filter-actions">
 
-      <select>
-        <option>All Status</option>
-        <option>Verified</option>
-        <option>Pending</option>
-      </select>
+        <button className="mini-btn active">
+          Personal
+        </button>
 
-      <button className="filter-btn">
-        Apply Filters
-      </button>
+        <button className="mini-btn">
+          Family
+        </button>
+
+        <button className="mini-btn">
+          <FiFilter />
+          Filters
+        </button>
+
+        <select className="sort-select">
+          <option>Sort: Recent</option>
+          <option>Oldest</option>
+          <option>Name A-Z</option>
+        </select>
+
+      </div>
 
     </div>
   );

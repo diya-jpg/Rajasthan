@@ -1,0 +1,376 @@
+/* ==========================
+MODAL OVERLAY
+========================== */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  z-index: 9999;
+}
+
+/* ==========================
+MODAL
+========================== */
+
+.fetch-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 720px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+/* ==========================
+SCROLLBAR
+========================== */
+
+.fetch-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fetch-modal::-webkit-scrollbar-track {
+  background: #f1f5f9;
+
+  border-radius: 999px;
+}
+
+.fetch-modal::-webkit-scrollbar-thumb {
+  background: #7dbad4;
+
+  border-radius: 999px;
+}
+
+/* ==========================
+CLOSE BUTTON
+========================== */
+
+.close-btn {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  color: #64748b;
+}
+
+/* ==========================
+HEADER
+========================== */
+
+.fetch-modal h2 {
+  margin: 0;
+
+  color: #1e3a5f;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal-subtitle {
+  margin-top: 8px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* ==========================
+INFO BOX
+========================== */
+
+.info-box {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: #eef5ff;
+
+  color: #475569;
+
+  display: flex;
+
+  gap: 12px;
+
+  line-height: 1.5;
+}
+
+/* ==========================
+FORM
+========================== */
+
+.form-group {
+  margin-top: 16px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+
+  height: 48px;
+
+  border: 1px solid #dbe4ee;
+
+  border-radius: 12px;
+
+  padding: 0 14px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #7dbad4;
+
+  box-shadow: 0 0 0 4px rgba(125, 186, 212, 0.15);
+}
+
+.form-group small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+/* ==========================
+ISSUED BOX
+========================== */
+
+.issued-box {
+  margin-top: 16px;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.issued-box span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.issued-box strong {
+  color: #1e3a5f;
+
+  font-size: 15px;
+}
+
+/* ==========================
+HELP LINK
+========================== */
+
+.help-link {
+  display: inline-block;
+
+  margin-top: 14px;
+
+  color: #7dbad4;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.help-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+SUCCESS BOX
+========================== */
+
+.success-box {
+  margin-top: 16px;
+
+  padding: 14px;
+
+  background: #ecfdf5;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 16px;
+}
+
+.success-box strong {
+  color: #166534;
+
+  font-size: 16px;
+}
+
+.success-box p {
+  margin: 8px 0;
+
+  color: #166534;
+}
+
+.success-box span {
+  color: #1e3a5f;
+
+  font-weight: 700;
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+.modal-footer {
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.done-btn {
+  height: 46px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #1e3a5f;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.done-btn:hover {
+  background: #16304f;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+  .modal-overlay {
+    padding: 16px;
+  }
+
+  .fetch-modal {
+    max-width: 95%;
+
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .fetch-modal h2 {
+    font-size: 22px;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .fetch-modal {
+    padding: 16px;
+
+    border-radius: 18px;
+
+    max-height: 95vh;
+  }
+
+  .fetch-modal h2 {
+    font-size: 20px;
+  }
+
+  .modal-subtitle {
+    font-size: 13px;
+  }
+
+  .info-box,
+  .issued-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .modal-footer {
+    justify-content: stretch;
+  }
+
+  .done-btn {
+    width: 100%;
+  }
+}

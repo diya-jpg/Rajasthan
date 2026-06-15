@@ -1,9 +1,11 @@
-.gov-row {
+.self-row {
   display: grid;
 
   grid-template-columns:
     2.5fr
     1fr
+    0.8fr
+    1.2fr
     0.8fr
     1fr
     1fr;
@@ -19,15 +21,18 @@
   transition: all 0.25s ease;
 }
 
-.gov-row:hover {
+.self-row:hover {
   background: #e5e7eb;
-
-  border-radius: 12px;
 }
 
-.gov-row:last-child {
+.self-row:last-child {
   border-bottom: none;
 }
+
+/* ==========================
+DOCUMENT DETAILS
+========================== */
+
 .doc-details {
   display: flex;
   align-items: center;
@@ -39,6 +44,8 @@
   width: 48px;
   height: 48px;
 
+  border-radius: 14px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,8 +53,6 @@
   background: #7dbad4;
 
   color: #1e3a5f;
-
-  border-radius: 14px;
 
   font-size: 20px;
 
@@ -63,29 +68,9 @@
   font-weight: 700;
 }
 
-.doc-info p {
-  margin-top: 4px;
-
-  color: #64748b;
-
-  font-size: 12px;
-}
-.doc-details h4 {
-  margin: 0;
-
-  color: #1e3a5f;
-
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.doc-details p {
-  margin-top: 4px;
-
-  color: #64748b;
-
-  font-size: 12px;
-}
+/* ==========================
+BADGES
+========================== */
 
 .verified-badge {
   display: inline-flex;
@@ -104,12 +89,26 @@
   font-weight: 700;
 }
 
-.doc-size,
-.doc-date {
-  color: #475569;
+.uploaded-badge {
+  display: inline-flex;
 
-  font-size: 13px;
+  align-items: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  font-size: 12px;
+  font-weight: 700;
 }
+
+/* ==========================
+ACTIONS
+========================== */
 
 .doc-actions {
   display: flex;
@@ -128,8 +127,6 @@
   background: #ffffff;
 
   cursor: pointer;
-
-  transition: all 0.25s ease;
 }
 
 .doc-actions button:hover {
@@ -142,14 +139,10 @@ TABLET
 
 @media (max-width: 768px) {
 
-  .gov-row {
+  .self-row {
     grid-template-columns: 1fr;
 
     gap: 12px;
-  }
-
-  .doc-actions {
-    justify-content: flex-start;
   }
 }
 
@@ -159,15 +152,11 @@ MOBILE
 
 @media (max-width: 480px) {
 
-  .gov-row {
+  .self-row {
     padding: 14px;
   }
 
-  .doc-details h4 {
+  .doc-info h4 {
     font-size: 14px;
-  }
-
-  .doc-details p {
-    font-size: 11px;
   }
 }

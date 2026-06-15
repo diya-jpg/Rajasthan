@@ -1,21 +1,23 @@
-.gov-table {
+.self-table {
   background: #ffffff;
 
   border: 1px solid #e2e8f0;
 
   border-radius: 22px;
- transition: all 0.25s ease;
-  overflow: hidden;
 
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+  overflow-x: auto;
+
+  box-shadow: 0 6px 16px rgba(15,23,42,0.05);
 }
 
-.gov-table-header {
+.self-table-header {
   display: grid;
 
   grid-template-columns:
     2.5fr
     1fr
+    0.8fr
+    1.2fr
     0.8fr
     1fr
     1fr;
@@ -24,16 +26,16 @@
 
   padding: 18px;
 
-  background: rgba(125, 186, 212, 0.12);
+  background: rgba(125,186,212,0.12);
 
   border-bottom: 1px solid #e2e8f0;
 
   color: #1e3a5f;
 
- font-size: 11px;
-
-letter-spacing: 0.5px;
+  font-size: 11px;
   font-weight: 700;
+
+  letter-spacing: 0.5px;
 
   text-transform: uppercase;
 }
@@ -44,7 +46,7 @@ TABLET
 
 @media (max-width: 768px) {
 
-  .gov-table-header {
+  .self-table-header {
     display: none;
   }
 }
@@ -55,8 +57,7 @@ MOBILE
 
 @media (max-width: 480px) {
 
-  .gov-table {
+  .self-table {
     border-radius: 18px;
-    overflow: hidden;
   }
 }

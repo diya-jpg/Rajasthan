@@ -2,7 +2,6 @@ import "./GovernmentDocuments.css";
 
 import GovPageHeader from "../../components/GovPageHeader";
 import GovFilterBar from "../../components/GovFilterBar";
-import GovTabs from "../../components/GovTabs";
 import GovDocumentsTable from "../../components/GovDocumentsTable";
 
 function GovernmentDocuments({ documents }) {
@@ -12,8 +11,6 @@ function GovernmentDocuments({ documents }) {
       <GovPageHeader />
 
       <GovFilterBar />
-
-      <GovTabs />
 
       <GovDocumentsTable documents={documents} />
 

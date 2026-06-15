@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
-
+import SelfUploaded from "./pages/SelfUploaded/SelfUploaded";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import GovernmentDocuments from "./pages/GovernmentDocuments/GovernmentDocuments";
-
+import SharedDocuments from "./pages/SharedDocuments/SharedDocuments";
 function App() {
 
 const governmentDocuments = [
@@ -75,7 +75,7 @@ const governmentDocuments = [
             />
 <Route
   path="/self-uploaded"
-  element={<h2>Self Uploaded Documents</h2>}
+  element={<SelfUploaded />}
 />
 
 <Route
@@ -85,7 +85,7 @@ const governmentDocuments = [
 
 <Route
   path="/shared-documents"
-  element={<h2>Shared Documents</h2>}
+  element={<SharedDocuments />}
 />
           </Routes>
 
