@@ -1,6 +1,15 @@
 import "./Sidebar.css";
 import logo from "../assets/raivault-logo.png";
 
+import {
+  FiGrid,
+  FiFileText,
+  FiUploadCloud,
+  FiHeart,
+  FiShare2,
+  FiDatabase
+} from "react-icons/fi";
+
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
@@ -24,7 +33,10 @@ function Sidebar() {
             `nav-item ${isActive ? "active" : ""}`
           }
         >
-          <span className="nav-icon">🏠</span>
+          <span className="nav-icon">
+            <FiGrid />
+          </span>
+
           <span>Dashboard</span>
         </NavLink>
 
@@ -34,56 +46,68 @@ function Sidebar() {
             `nav-item ${isActive ? "active" : ""}`
           }
         >
-          <span className="nav-icon">📁</span>
+          <span className="nav-icon">
+            <FiFileText />
+          </span>
+
           <span>Government Documents</span>
         </NavLink>
 
         <NavLink
           to="/self-uploaded"
-          className="nav-item"
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active" : ""}`
+          }
         >
-          <span className="nav-icon">☁️</span>
+          <span className="nav-icon">
+            <FiUploadCloud />
+          </span>
+
           <span>Self Uploaded</span>
         </NavLink>
 
         <NavLink
-          to="/medical-documents"
-          className="nav-item"
+          to="/digilocker"
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active" : ""}`
+          }
         >
-          <span className="nav-icon">❤️</span>
-          <span>Medical Documents</span>
+          <span className="nav-icon">
+            <FiHeart />
+          </span>
+
+          <span>DigiLocker</span>
         </NavLink>
 
         <NavLink
           to="/shared-documents"
-          className="nav-item"
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active" : ""}`
+          }
         >
-          <span className="nav-icon">🔗</span>
+          <span className="nav-icon">
+            <FiShare2 />
+          </span>
+
           <span>Shared Documents</span>
         </NavLink>
 
-      {/* STORAGE */}
+    <div className="storage-nav-section">
 
-<div className="storage-inline">
-
-  <div className="storage-label">
-
-    <span className="storage-icon">
-      💾
+  <div className="storage-nav-item">
+    <span className="nav-icon">
+      <FiDatabase />
     </span>
 
-    <span>
-      Storage
-    </span>
-
+    <span>Storage</span>
   </div>
 
-  <div className="storage-bar">
-    <div className="storage-fill"></div>
+  <div className="storage-progress-line">
+    <div className="storage-progress-fill"></div>
   </div>
 
-  <div className="storage-text">
-    3.5 GB of 10 GB used
+  <div className="storage-info">
+    23.32 MB / 512 MB
   </div>
 
 </div>

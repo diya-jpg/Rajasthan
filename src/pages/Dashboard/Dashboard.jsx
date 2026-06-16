@@ -13,34 +13,40 @@ import {
 
 function Dashboard() {
 
-  const actionCards = [
-    {
-      title: "View Government Documents",
-      subtitle: "Access official documents",
-      icon: <FiFileText />,
-    },
-    {
-      title: "Upload Document",
-      subtitle: "Upload your files",
-      icon: <FiUpload />,
-    },
-    {
-      title: "Fetch Government Document",
-      subtitle: "Retrieve documents",
-      icon: <FiSearch />,
-    },
-    {
-      title: "Share Document",
-      subtitle: "Share securely",
-      icon: <FiShare2 />,
-    },
-    {
-  title: "Sync Digilocker",
-  subtitle: "Keep documents updated",
-  icon: <FiRefreshCw />,
-},
-  ];
+ const actionCards = [
+  {
+    
+  title: "View Documents",
+  subtitle: "Access official documents",
 
+    icon: <FiFileText />,
+    iconClass: "icon-blue",
+  },
+  {
+    title: "Upload Document",
+    subtitle: "Upload your files",
+    icon: <FiUpload />,
+    iconClass: "icon-upload",
+  },
+  {
+    title: "Fetch Government Document",
+    subtitle: "Retrieve documents",
+    icon: <FiSearch />,
+    iconClass: "icon-green",
+  },
+  {
+    title: "Share Document",
+    subtitle: "Share securely",
+    icon: <FiShare2 />,
+    iconClass: "icon-share",
+  },
+  {
+    title: "Sync Digilocker",
+    subtitle: "Keep documents updated",
+    icon: <FiRefreshCw />,
+    iconClass: "icon-red",
+  },
+];
   const recentDocs = [
     {
       title: "12th Marksheet - RBSE",

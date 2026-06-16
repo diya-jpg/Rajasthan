@@ -79,8 +79,8 @@ const governmentDocuments = [
 />
 
 <Route
-  path="/medical-documents"
-  element={<h2>Medical Documents</h2>}
+  path="/digilocker"
+  element={<h2>DigiLocker</h2>}
 />
 
 <Route

@@ -2,23 +2,409 @@
   width: 280px;
   min-width: 280px;
   min-height: 100vh;
+background: linear-gradient(
+  180deg,
+  #0b4f84 0%,
+  #084877 40%,
+  #063a6b 100%
+); 
 
-   background: linear-gradient(
-    180deg,
-    #7dbad4 0%,
-    #6caecb 100%
-  );
-  color: #0f172a;
+position: relative;
+overflow: hidden;
+  
 
-  padding: 24px 18px;
+  color: #26448a;
+
+    padding: 24px 18px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   border-right: 1px solid #6caecb;
-}
+} 
 
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      25deg,
+      transparent 48%,
+      rgba(255,255,255,0.08) 49%,
+      rgba(255,255,255,0.08) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      -35deg,
+      transparent 48%,
+      rgba(255,255,255,0.06) 49%,
+      rgba(255,255,255,0.06) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      65deg,
+      transparent 48%,
+      rgba(255,255,255,0.05) 49%,
+      rgba(255,255,255,0.05) 51%,
+      transparent 52%
+    );
+
+  background-size:
+    280px 280px,
+    350px 350px,
+    420px 420px;
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,0.12) 0 6px, transparent 7px),
+    radial-gradient(circle at 75% 25%, rgba(255,255,255,0.10) 0 5px, transparent 6px),
+    radial-gradient(circle at 35% 60%, rgba(255,255,255,0.08) 0 5px, transparent 6px),
+    radial-gradient(circle at 85% 80%, rgba(255,255,255,0.10) 0 6px, transparent 7px);
+
+  pointer-events: none;
+} */
+
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      1200px 600px at -20% 100%,
+      rgba(255,255,255,0.05) 0%,
+      rgba(255,255,255,0.03) 30%,
+      transparent 31%
+    ),
+
+    radial-gradient(
+      1000px 500px at -10% 100%,
+      rgba(255,255,255,0.04) 0%,
+      rgba(255,255,255,0.02) 28%,
+      transparent 29%
+    ),
+
+    radial-gradient(
+      800px 400px at -5% 100%,
+      rgba(255,255,255,0.03) 0%,
+      transparent 26%
+    );
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 35%;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 55%,
+      rgba(255,255,255,0.08) 56%,
+      transparent 57%
+    ),
+
+    linear-gradient(
+      145deg,
+      transparent 68%,
+      rgba(255,255,255,0.05) 69%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+} */
+
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+
+  top: -5%;
+  right: -20%;
+
+  width: 90%;
+  height: 40%;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 35%,
+      rgba(255,255,255,0.10) 45%,
+      rgba(255,255,255,0.02) 65%,
+      transparent 75%
+    );
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+
+  left: -55%;
+  bottom: -18%;
+
+  width: 120%;
+  height: 45%;
+
+  border-radius: 50%;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 -40px 0 rgba(255,255,255,0.04),
+    0 -80px 0 rgba(255,255,255,0.025);
+
+  pointer-events: none;
+} */
+
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+
+  top: -8%;
+  right: -25%;
+
+  width: 95%;
+  height: 42%;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(255,255,255,0.10) 52%,
+      rgba(255,255,255,0.03) 62%,
+      transparent 72%
+    ),
+    linear-gradient(
+      145deg,
+      transparent 58%,
+      rgba(255,255,255,0.07) 68%,
+      transparent 78%
+    );
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+
+  left: -45%;
+  bottom: -12%;
+
+  width: 120%;
+  height: 45%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 58%,
+      rgba(255,255,255,0.06) 59%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 70%,
+      rgba(255,255,255,0.04) 71%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 82%,
+      rgba(255,255,255,0.03) 83%,
+      transparent 84%
+    );
+
+  pointer-events: none;
+} */
+
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+
+  
+  radial-gradient(
+    circle at 15% 18%,
+    transparent 0,
+    transparent 180px,
+    rgba(255,255,255,0.05) 181px,
+    transparent 182px
+  ),
+
+  radial-gradient(
+    circle at 15% 18%,
+    transparent 0,
+    transparent 280px,
+    rgba(255,255,255,0.04) 281px,
+    transparent 282px
+  ),
+
+ 
+  radial-gradient(
+    circle at 120% 40%,
+    transparent 55%,
+    rgba(255,255,255,0.08) 56%,
+    transparent 57%
+  ),
+
+  radial-gradient(
+    circle at -20% 115%,
+    transparent 62%,
+    rgba(255,255,255,0.08) 63%,
+    transparent 64%
+  );
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+
+  left: -10%;
+  right: -10%;
+  bottom: -5%;
+
+  height: 34%;
+
+  background:
+    repeating-radial-gradient(
+      ellipse at left bottom,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+
+  opacity: 0.45;
+
+  pointer-events: none;
+} */
+
+/* .sidebar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+
+    radial-gradient(
+      circle at -20% 120%,
+      transparent 58%,
+      rgba(255,255,255,0.12) 59%,
+      transparent 60%
+    ),
+
+    radial-gradient(
+      circle at -20% 120%,
+      transparent 68%,
+      rgba(255,255,255,0.08) 69%,
+      transparent 70%
+    ),
+
+    radial-gradient(
+      circle at 120% -10%,
+      transparent 58%,
+      rgba(255,255,255,0.10) 59%,
+      transparent 60%
+    );
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+  top: -20%;
+  left: -30%;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.12) 0%,
+    transparent 70%
+  );
+
+  pointer-events: none;
+} */
+ .sidebar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      125deg,
+      transparent 35%,
+      rgba(255,255,255,0.08) 48%,
+      transparent 60%
+    ),
+
+    linear-gradient(
+      140deg,
+      transparent 55%,
+      rgba(255,255,255,0.05) 63%,
+      transparent 72%
+    );
+
+  pointer-events: none;
+}
+.sidebar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  right: -600px;
+  top: -250px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 0 0 80px rgba(255,255,255,0.03),
+    0 0 0 160px rgba(255,255,255,0.02),
+    0 0 0 240px rgba(255,255,255,0.015);
+
+  pointer-events: none;
+}
 /* ======================
    BRAND / LOGO
 ====================== */
@@ -58,7 +444,11 @@
 
 .nav-item {
   width: 100%;
+ color: #ffffff;
 
+  font-size: 15px;
+
+  font-weight: 500;
   display: flex;
   align-items: center;
 
@@ -71,12 +461,12 @@
 
   background: transparent;
 
-  color: #1e3a5f;
+  
 
   text-decoration: none;
 
-  font-size: 15px;
-  font-weight: 500;
+ 
+  
 
   transition: all 0.3s ease;
 
@@ -84,20 +474,22 @@
 }
 
 .nav-icon {
-  font-size: 18px;
-
   width: 20px;
 
-  flex-shrink: 0;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  font-size: 18px;
+}
 /* Hover */
 
 .nav-item:hover {
- 
-  background: rgba(255,255,255,0.85);
+  background: rgba(11, 75, 131, 0.7);
 
-  color: #0f172a;
+  color: #ffffff;
+
+  border-radius: 16px;
 
   border: 1px solid rgba(147, 197, 253, 0.15);
 
@@ -108,13 +500,16 @@
 /* Active Menu */
 
 .nav-item.active {
- 
-  color: #0f172a;
+  background: #0b4b83;
 
+  color: #ffffff;
+
+  border-radius: 16px;
+ 
   font-weight: 600;
 
  
-   background: rgba(255,255,255,0.9);
+ 
 
   border: 1px solid rgba(255,255,255,0.6);
 
@@ -218,84 +613,54 @@
     font-size: 16px;
   }
 }
-/* ======================
-   STORAGE INLINE
-====================== */
+/* ==========================
+STORAGE MENU STYLE
+========================== */
 
-.storage-inline {
-  margin-top: 18px;
-
-  padding: 12px 6px 0;
-}
-
-.storage-label {
+.storage-nav-item {
   display: flex;
   align-items: center;
+  gap: 12px;
 
-  gap: 10px;
+  padding: 12px 16px;
 
-  color: #1e3a5f;
+  color: rgba(255,255,255,0.92);
 
-  font-size: 14px;
-  font-weight: 700;
-
-  margin-bottom: 14px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.storage-icon {
-  font-size: 18px;
-
-  line-height: 1;
+.storage-nav-item svg {
+  color: rgba(255,255,255,0.92);
 }
+.storage-progress-line {
+  height: 6px;
 
-
-.storage-bar {
-  height: 8px;
-
-  background: rgba(148, 163, 184, 0.2);
+  background: #dbe5ef;
 
   border-radius: 999px;
+
+  margin: 0 16px;
 
   overflow: hidden;
 }
 
-.storage-fill {
-  width: 35%;
+.storage-progress-fill {
+  width: 8%;
 
   height: 100%;
- background: linear-gradient(
-    90deg,
-    #5aa6c8,
-    #7dbad4);
- 
+
+  background: #005bac;
+
   border-radius: inherit;
 }
 
-.storage-text {
-  margin-top: 12px;
+.storage-info {
+  padding: 8px 16px 0;
 
-  color: #64748b;
+  color: #94a3b8;
 
   font-size: 12px;
-
-  line-height: 1.5;
-}
-
-/* ======================
-   TABLET
-====================== */
-
-@media (max-width: 1024px) {
-
-  .storage-label {
-    font-size: 13px;
-  }
-
-  .storage-icon {
-    font-size: 16px;
-  }
-
- 
 }
 
 /* ======================
@@ -309,7 +674,7 @@
   }
 }
 .footer-security {
-color: #475569;
+
 
   font-size: 13px;
   font-weight: 500;
