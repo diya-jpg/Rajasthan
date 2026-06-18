@@ -1,6 +1,6 @@
 import "./Dashboard.css";
 import HeroSection from "../../components/HeroSection";
-import RecentDocuments from "../../components/RecentDocuments";
+// import RecentDocuments from "../../components/RecentDocuments";
 import SidePanels from "../../components/SidePanels";
 
 import {
@@ -75,7 +75,7 @@ function Dashboard() {
       <HeroSection actionCards={actionCards} />
 
       <section className="dashboard-grid">
-        <RecentDocuments recentDocs={recentDocs} />
+        {/* <RecentDocuments recentDocs={recentDocs} /> */}
         <SidePanels recentDocs={recentDocs} />
       </section>
     </>

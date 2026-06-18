@@ -40,32 +40,29 @@ function SelfUploadStats() {
 
   return (
     <div className="stats-grid">
-
       {stats.map((item) => (
         <div
           key={item.title}
           className="stat-card"
         >
-
           <div className="stat-icon">
             {item.icon}
           </div>
 
-          <div className="stat-content">
+<div className="stat-content">
 
-            <span>
-              {item.title}
-            </span>
+  <div className="stat-title">
+    {item.title}
+  </div>
 
-            <h3>
-              {item.value}
-            </h3>
+  <div className="stat-value">
+    {item.value}
+  </div>
 
-          </div>
+</div>
 
         </div>
       ))}
-
     </div>
   );
 }

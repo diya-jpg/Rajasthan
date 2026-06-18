@@ -5,10 +5,14 @@ STATS GRID
 .stats-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
-  gap: 16px;
+  gap: 20px;
+
+  width: 100%;
+
+  margin-top: 28px;      /* NEW */
+  margin-bottom: 28px;   /* NEW */
 }
 
 /* ==========================
@@ -18,80 +22,119 @@ CARD
 .stat-card {
   background: #ffffff;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid #d6eaf5;
 
-  border-radius: 18px;
+  border-radius: 22px;
 
   padding: 18px;
 
   display: flex;
+
   align-items: center;
 
   gap: 14px;
 
-  transition: all 0.25s ease;
+  min-height: 120px;
 
-  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+
+  transition: all 0.25s ease;
 }
 
 .stat-card:hover {
-  background: #e5e7eb;
+  transform: translateY(-3px);
 
-  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
-.stat-icon {
-  width: 48px;
-  height: 48px;
+/* ==========================
+ICON
+========================== */
 
-  border-radius: 14px;
+.stat-icon {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  border-radius: 18px;
+
   background: #7dbad4;
 
   color: #1e3a5f;
 
-  font-size: 22px;
-
-  flex-shrink: 0;
-}
-
-.stat-content span {
-  display: block;
-
-  color: #64748b;
-
-  font-size: 11px;
-
-  text-transform: uppercase;
-
-  font-weight: 700;
-
-  margin-bottom: 4px;
-}
-
-.stat-content h3 {
-  margin: 0;
-
-  color: #1e3a5f;
-
-  font-size: 24px;
-
-  font-weight: 700;
+  font-size: 28px;
 }
 
 /* ==========================
-LARGE TABLET
+CONTENT
 ========================== */
 
-@media (max-width: 1200px) {
+.stat-content {
+  flex: 1;
 
-  .stats-grid {
-    grid-template-columns:
-      repeat(3, 1fr);
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.stat-title {
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+.stat-value {
+  margin-top: 6px;
+
+  color: #163b6b;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* ==========================
+LARGE LAPTOP
+========================== */
+
+@media (max-width: 1400px) {
+
+  .stat-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 24px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 16px;
   }
 }
 
@@ -99,15 +142,21 @@ LARGE TABLET
 TABLET
 ========================== */
 
+@media (max-width: 1100px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
 
   .stats-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .stat-content h3 {
-    font-size: 20px;
+  .stat-card {
+    min-height: 110px;
   }
 }
 
@@ -125,7 +174,18 @@ MOBILE
     padding: 16px;
   }
 
-  .stat-content h3 {
-    font-size: 18px;
+  .stat-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 15px;
   }
 }

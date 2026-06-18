@@ -4,15 +4,18 @@
 
   gap: 14px;
 
-  padding: 16px;
+  padding: 18px;
+
+  margin-top: 12px;      /* NEW */
+  margin-bottom: 24px;   /* NEW */
 
   background: #ffffff;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cae9f5;
 
-  border-radius: 18px;
+  border-radius: 22px;
 
-  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 /* ==========================
@@ -25,31 +28,37 @@ SEARCH
   display: flex;
   align-items: center;
 
-  gap: 10px;
+  gap: 12px;
 
-  height: 48px;
+  height: 56px;
 
-  padding: 0 16px;
+  padding: 0 18px;
 
-  border: 1px solid #dbe4ee;
+  border: 1px solid #cae9f5;
 
-  border-radius: 14px;
+  border-radius: 18px;
 
   background: #ffffff;
 
   transition: all 0.25s ease;
 }
 
+.self-search-box:hover {
+  background: #f8fcfe;
+}
+
 .self-search-box:focus-within {
   border-color: #7dbad4;
 
-  box-shadow: 0 0 0 4px rgba(125,186,212,0.15);
+  box-shadow: 0 0 0 4px rgba(125, 186, 212, 0.15);
 }
 
 .self-search-icon {
   color: #64748b;
 
-  font-size: 18px;
+  font-size: 20px;
+
+  flex-shrink: 0;
 }
 
 .self-search-box input {
@@ -62,7 +71,7 @@ SEARCH
 
   color: #1e3a5f;
 
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .self-search-box input::placeholder {
@@ -74,15 +83,15 @@ SELECTS
 ========================== */
 
 .self-filter-bar select {
-  height: 48px;
+  height: 56px;
 
-  min-width: 170px;
+  min-width: 180px;
 
-  padding: 0 14px;
+  padding: 0 16px;
 
-  border: 1px solid #dbe4ee;
+  border: 1px solid #cae9f5;
 
-  border-radius: 14px;
+  border-radius: 18px;
 
   background: #ffffff;
 
@@ -91,6 +100,18 @@ SELECTS
   font-size: 14px;
 
   cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.self-filter-bar select:hover {
+  background: #f8fcfe;
+}
+
+.self-filter-bar select:focus {
+  outline: none;
+
+  border-color: #7dbad4;
 }
 
 /* ==========================
@@ -101,6 +122,8 @@ TABLET
 
   .self-filter-bar {
     flex-wrap: wrap;
+
+    margin-bottom: 20px;
   }
 }
 
@@ -114,10 +137,17 @@ MOBILE
     flex-direction: column;
 
     align-items: stretch;
+
+    margin-bottom: 18px;
   }
 
   .self-filter-bar select {
     min-width: 100%;
+  }
+
+  .self-search-box,
+  .self-filter-bar select {
+    height: 50px;
   }
 }
 
@@ -129,10 +159,17 @@ SMALL MOBILE
 
   .self-filter-bar {
     padding: 14px;
+
+    margin-bottom: 16px;
   }
 
   .self-search-box,
   .self-filter-bar select {
     height: 44px;
+  }
+
+  .self-search-box input,
+  .self-filter-bar select {
+    font-size: 13px;
   }
 }

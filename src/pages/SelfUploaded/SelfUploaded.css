@@ -1,11 +1,122 @@
-.self-uploaded-page {
-  display: flex;
+/* ==========================
+STATS GRID
+========================== */
 
-  flex-direction: column;
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
   gap: 20px;
 
   width: 100%;
+}
+
+/* ==========================
+CARD
+========================== */
+
+.stat-card {
+  background: #ffffff;
+
+  border: 1px solid #cae9f5;
+
+  border-radius: 24px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 110px;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+
+  transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================
+ICON
+========================== */
+
+.stat-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background: #7dbad4;
+
+  color: #1e3a5f;
+
+  font-size: 24px;
+}
+
+/* ==========================
+CONTENT
+========================== */
+
+.stat-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.stat-title {
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.stat-value {
+  margin-top: 4px;
+
+  color: #1e3a5f;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* ==========================
+LAPTOP
+========================== */
+
+@media (max-width: 1200px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ==========================
@@ -14,8 +125,16 @@ TABLET
 
 @media (max-width: 768px) {
 
-  .self-uploaded-page {
-    gap: 16px;
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card {
+    min-height: 100px;
+  }
+
+  .stat-value {
+    font-size: 17px;
   }
 }
 
@@ -25,7 +144,26 @@ MOBILE
 
 @media (max-width: 480px) {
 
-  .self-uploaded-page {
-    gap: 14px;
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 20px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 16px;
   }
 }

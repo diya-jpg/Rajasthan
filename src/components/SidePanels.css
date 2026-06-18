@@ -1,6 +1,7 @@
 .side-panels {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 }
 
@@ -11,13 +12,13 @@ PANEL
 .panel {
   background: #ffffff;
 
-  border: 1px solid #d7e3ee;
+  border: 1px solid #dbe5ef;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
   padding: 24px;
 
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 
   transition: all 0.25s ease;
 }
@@ -25,7 +26,7 @@ PANEL
 .panel:hover {
   transform: translateY(-2px);
 
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 /* ==========================
@@ -33,100 +34,29 @@ HEADER
 ========================== */
 
 .panel-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  gap: 12px;
-
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .panel-label {
-  margin: 0 0 6px;
-
-  color: #64748b;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.panel-title-row h2 {
   margin: 0;
 
-  color: #0f172a;
+  color: #0f2f5f;
 
-  font-size: 22px;
+  font-size: 18px;
 
   font-weight: 700;
 }
 
 /* ==========================
-STORAGE BADGE
-========================== */
-
-.storage-badge {
-  background: #dce8f4;
-
-  color: #005bac;
-
-  border: none;
-
-  padding: 8px 14px;
-
-  border-radius: 999px;
-
-  font-size: 12px;
-  font-weight: 700;
-}
-
-/* ==========================
-STORAGE BAR
-========================== */
-
-.storage-meter {
-  height: 10px;
-
-  background: #edf2f7;
-
-  border-radius: 999px;
-
-  overflow: hidden;
-
-  margin: 18px 0;
-}
-
-.storage-fill {
-  height: 100%;
-
-  background: #005bac;
-
-  border-radius: inherit;
-}
-
-.storage-note {
-  margin: 0;
-
-  color: #64748b;
-
-  font-size: 13px;
-
-  line-height: 1.6;
-}
-
-/* ==========================
-NEWS / ACTIVITY
+RECENT DOCUMENTS
 ========================== */
 
 .news-item {
-  background: #f8fbff;
+  background: #f8fafc;
 
-  border: 1px solid #e5edf4;
+  border: 1px solid #e2e8f0;
 
-  border-radius: 18px;
+  border-radius: 16px;
 
   padding: 16px;
 
@@ -135,24 +65,22 @@ NEWS / ACTIVITY
   transition: all 0.25s ease;
 }
 
-.news-item:hover {
-  transform: translateY(-2px);
-
-  background: #eef6fc;
-
-  border-color: #dce8f4;
-
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
-}
-
 .news-item:last-child {
   margin-bottom: 0;
+}
+
+.news-item:hover {
+  background: #f1f5f9;
+
+  border-color: #cbd5e1;
+
+  transform: translateY(-2px);
 }
 
 .news-item strong {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
   color: #0f172a;
 
@@ -168,7 +96,7 @@ NEWS / ACTIVITY
 
   font-size: 13px;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ==========================
@@ -176,9 +104,9 @@ TABLET
 ========================== */
 
 @media (max-width: 768px) {
-  .panel-title-row {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .panel {
+    padding: 20px;
   }
 }
 
@@ -187,16 +115,13 @@ MOBILE
 ========================== */
 
 @media (max-width: 520px) {
+
   .panel {
     padding: 18px;
   }
 
-  .panel-title-row h2 {
-    font-size: 18px;
-  }
-
-  .storage-badge {
-    font-size: 11px;
+  .panel-label {
+    font-size: 16px;
   }
 
   .news-item {

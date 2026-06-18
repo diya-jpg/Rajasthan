@@ -1,53 +1,74 @@
 .gov-page {
   display: flex;
-
   flex-direction: column;
 
-  gap: 24px;
-
-  width: 100%;
+  gap: 20px;
 }
 
-/* ==========================
-PAGE ANIMATION
-========================== */
+/* Dashboard Style Banner */
 
-.gov-page > * {
-  animation: fadeIn 0.3s ease;
+.gov-banner {
+  background: #cae9f5;
+
+  border: 1px solid #b8dceb;
+
+  border-radius: 24px;
+
+  padding: 28px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.gov-banner::before {
+  content: "";
 
-    transform: translateY(8px);
-  }
+  position: absolute;
 
-  to {
-    opacity: 1;
+  width: 220px;
+  height: 220px;
 
-    transform: translateY(0);
-  }
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.25);
 }
 
-/* ==========================
-TABLET
-========================== */
+.gov-badge {
+  display: inline-block;
 
-@media (max-width: 768px) {
+  padding: 8px 14px;
 
-  .gov-page {
-    gap: 18px;
-  }
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.65);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #1e3a5f;
 }
 
-/* ==========================
-MOBILE
-========================== */
+.gov-banner h1 {
+  margin-top: 12px;
 
-@media (max-width: 480px) {
+  color: #1e3a5f;
 
-  .gov-page {
-    gap: 14px;
-  }
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+.gov-banner p {
+  margin-top: 10px;
+
+  color: #475569;
+
+  max-width: 650px;
+
+  line-height: 1.6;
 }

@@ -6,15 +6,30 @@ import GovDocumentsTable from "../../components/GovDocumentsTable";
 
 function GovernmentDocuments({ documents }) {
   return (
-    <section className="gov-page">
+  <section className="gov-page">
 
-      <GovPageHeader />
+  <div className="gov-banner">
 
-      <GovFilterBar />
+    <div className="gov-banner-content">
+      <span className="gov-badge">
+        GOVERNMENT RECORDS
+      </span>
 
-      <GovDocumentsTable documents={documents} />
+      <h1>Government Documents</h1>
 
-    </section>
+      <p>
+        Access, verify and manage all your
+        government-issued documents securely.
+      </p>
+    </div>
+
+  </div>
+
+  <GovFilterBar />
+
+  <GovDocumentsTable documents={documents} />
+
+</section>
   );
 }
 

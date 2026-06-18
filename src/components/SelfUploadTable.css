@@ -1,14 +1,22 @@
+/* ==========================
+TABLE
+========================== */
+
 .self-table {
   background: #ffffff;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid #dbe5ef;
 
   border-radius: 22px;
 
-  overflow-x: auto;
+  overflow: hidden;
 
-  box-shadow: 0 6px 16px rgba(15,23,42,0.05);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
+
+/* ==========================
+TABLE HEADER
+========================== */
 
 .self-table-header {
   display: grid;
@@ -24,18 +32,18 @@
 
   gap: 16px;
 
-  padding: 18px;
+  padding: 20px 24px;
 
-  background: rgba(125,186,212,0.12);
+  background: #f8fbfd;
 
   border-bottom: 1px solid #e2e8f0;
 
-  color: #1e3a5f;
+  color: #0f2f5f;
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 
   text-transform: uppercase;
 }

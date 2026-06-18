@@ -2,7 +2,7 @@
   display: grid;
 
   grid-template-columns:
-    2.5fr
+    3fr
     1fr
     0.8fr
     1fr
@@ -10,9 +10,9 @@
 
   align-items: center;
 
-  gap: 16px;
+  gap: 20px;
 
-  padding: 18px;
+  padding: 16px 24px;
 
   border-bottom: 1px solid #e2e8f0;
 
@@ -20,34 +20,39 @@
 }
 
 .gov-row:hover {
-  background: #e5e7eb;
-
-  border-radius: 12px;
+  background: #f1f5f9;
 }
 
 .gov-row:last-child {
   border-bottom: none;
 }
+
+/* ==========================
+DOCUMENT DETAILS
+========================== */
+
 .doc-details {
   display: flex;
+
   align-items: center;
 
   gap: 14px;
 }
 
 .doc-icon {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  background: #7dbad4;
+  background: rgba(125, 186, 212, 0.18);
 
-  color: #1e3a5f;
+  color: #0b4b83;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   font-size: 20px;
 
@@ -60,7 +65,10 @@
   color: #1e3a5f;
 
   font-size: 15px;
+
   font-weight: 700;
+
+  line-height: 1.4;
 }
 
 .doc-info p {
@@ -69,30 +77,23 @@
   color: #64748b;
 
   font-size: 12px;
-}
-.doc-details h4 {
-  margin: 0;
 
-  color: #1e3a5f;
-
-  font-size: 15px;
-  font-weight: 700;
+  line-height: 1.4;
 }
 
-.doc-details p {
-  margin-top: 4px;
-
-  color: #64748b;
-
-  font-size: 12px;
-}
+/* ==========================
+STATUS
+========================== */
 
 .verified-badge {
   display: inline-flex;
 
   align-items: center;
+  justify-content: center;
 
-  padding: 6px 12px;
+  min-width: 110px;
+
+  padding: 8px 16px;
 
   border-radius: 999px;
 
@@ -100,32 +101,47 @@
 
   color: #166534;
 
-  font-size: 12px;
+  font-size: 13px;
+
   font-weight: 700;
 }
+
+/* ==========================
+SIZE & DATE
+========================== */
 
 .doc-size,
 .doc-date {
   color: #475569;
 
-  font-size: 13px;
+  font-size: 14px;
+
+  font-weight: 500;
 }
+
+/* ==========================
+ACTIONS
+========================== */
 
 .doc-actions {
   display: flex;
 
-  gap: 8px;
+  align-items: center;
+
+  gap: 10px;
 }
 
 .doc-actions button {
   width: 36px;
   height: 36px;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cae9f5;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   background: #ffffff;
+
+  color: #1e3a5f;
 
   cursor: pointer;
 
@@ -133,7 +149,11 @@
 }
 
 .doc-actions button:hover {
-  background: #f1f5f9;
+  background: #eaf4fb;
+
+  border-color: #7dbad4;
+
+  transform: translateY(-2px);
 }
 
 /* ==========================
@@ -146,6 +166,8 @@ TABLET
     grid-template-columns: 1fr;
 
     gap: 12px;
+
+    padding: 16px;
   }
 
   .doc-actions {
@@ -163,11 +185,24 @@ MOBILE
     padding: 14px;
   }
 
-  .doc-details h4 {
+  .doc-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .doc-info h4 {
     font-size: 14px;
   }
 
-  .doc-details p {
+  .doc-info p {
     font-size: 11px;
+  }
+
+  .verified-badge {
+    min-width: 95px;
+
+    font-size: 12px;
   }
 }

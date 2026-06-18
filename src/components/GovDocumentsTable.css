@@ -1,14 +1,24 @@
 .gov-table {
   background: #ffffff;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cae9f5;
 
   border-radius: 22px;
- transition: all 0.25s ease;
+
   overflow: hidden;
+
+  transition: all 0.25s ease;
 
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
 }
+
+.gov-table:hover {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================
+HEADER
+========================== */
 
 .gov-table-header {
   display: grid;
@@ -22,20 +32,33 @@
 
   gap: 16px;
 
-  padding: 18px;
+  padding: 20px;
 
-  background: rgba(125, 186, 212, 0.12);
+  background: #f2f9fc;
 
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cae9f5;
 
   color: #1e3a5f;
 
- font-size: 11px;
+  font-size: 11px;
 
-letter-spacing: 0.5px;
   font-weight: 700;
 
+  letter-spacing: 0.8px;
+
   text-transform: uppercase;
+}
+
+/* ==========================
+ROWS
+========================== */
+
+.gov-row {
+  transition: all 0.25s ease;
+}
+
+.gov-row:hover {
+  background: #f8fcfe;
 }
 
 /* ==========================
@@ -47,6 +70,10 @@ TABLET
   .gov-table-header {
     display: none;
   }
+
+  .gov-table {
+    border-radius: 20px;
+  }
 }
 
 /* ==========================
@@ -57,6 +84,7 @@ MOBILE
 
   .gov-table {
     border-radius: 18px;
+
     overflow: hidden;
   }
 }

@@ -1,6 +1,4 @@
-/* ==========================
-RECENT DOCUMENTS PANEL
-========================== */
+/* 
 
 .recent-panel {
   background: #ffffff;
@@ -14,9 +12,7 @@ RECENT DOCUMENTS PANEL
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
-/* ==========================
-HEADER
-========================== */
+
 
 .panel-header {
   display: flex;
@@ -51,9 +47,7 @@ HEADER
   font-weight: 600;
 }
 
-/* ==========================
-DOCUMENT LIST
-========================== */
+
 
 .document-list {
   display: flex;
@@ -86,9 +80,7 @@ DOCUMENT LIST
   box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
 }
 
-/* ==========================
-LEFT SECTION
-========================== */
+
 
 .document-left {
   display: flex;
@@ -145,9 +137,7 @@ LEFT SECTION
   font-size: 14px;
 }
 
-/* ==========================
-RIGHT SECTION
-========================== */
+
 
 .document-meta {
   display: flex;
@@ -203,9 +193,7 @@ RIGHT SECTION
   height: 18px;
 }
 
-/* ==========================
-TABLET
-========================== */
+
 
 @media (max-width: 900px) {
   .document-row {
@@ -222,9 +210,7 @@ TABLET
   }
 }
 
-/* ==========================
-MOBILE
-========================== */
+
 
 @media (max-width: 520px) {
   .panel-header {
@@ -259,4 +245,4 @@ MOBILE
 
     gap: 12px;
   }
-}
+}  */

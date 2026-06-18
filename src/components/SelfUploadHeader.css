@@ -1,13 +1,51 @@
-/* ==========================
-HEADER
-========================== */
 
-.self-header {
+/* .self-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 24px;
+
+  padding: 28px;
+
+  background: #cae9f5;
+
+  border: 1px solid #b8dceb;
+
+  border-radius: 24px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  flex-wrap: wrap;
+}
+
+.self-header::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.18);
+}
+
+.self-header-left,
+.self-header-right {
+  position: relative;
+  z-index: 2;
+}
+
+.self-header-left {
+  flex: 1;
+  min-width: 320px;
 }
 
 .self-header-left h1 {
@@ -15,23 +53,23 @@ HEADER
 
   color: #1e3a5f;
 
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-
-  white-space: nowrap;
 }
 
 .self-header-left p {
-  margin-top: 8px;
+  margin-top: 10px;
 
-  color: #64748b;
+  color: #475569;
 
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.6;
 
   max-width: 650px;
 }
+
+
 
 .self-header-right {
   display: flex;
@@ -39,12 +77,12 @@ HEADER
 
   gap: 12px;
 
-  flex-shrink: 0;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
 }
 
-/* ==========================
-SECONDARY BUTTON
-========================== */
+
 
 .secondary-btn {
   display: flex;
@@ -53,13 +91,13 @@ SECONDARY BUTTON
 
   gap: 8px;
 
-  height: 46px;
+  height: 48px;
 
   padding: 0 18px;
 
-  border: 1px solid #dbe4ee;
+  border: 1px solid #cae9f5;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   background: #ffffff;
 
@@ -75,11 +113,11 @@ SECONDARY BUTTON
 
 .secondary-btn:hover {
   background: #f8fafc;
+
+  transform: translateY(-2px);
 }
 
-/* ==========================
-PRIMARY BUTTON
-========================== */
+
 
 .primary-btn {
   display: flex;
@@ -88,15 +126,15 @@ PRIMARY BUTTON
 
   gap: 8px;
 
-  height: 46px;
+  height: 48px;
 
   padding: 0 20px;
 
   border: none;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
-  background: #1e3a5f;
+  background: #0b4b83;
 
   color: #ffffff;
 
@@ -106,17 +144,18 @@ PRIMARY BUTTON
   cursor: pointer;
 
   transition: all 0.25s ease;
+
+  box-shadow: 0 6px 16px rgba(11, 75, 131, 0.20);
 }
 
 .primary-btn:hover {
-  background: #16304f;
+  background: #083d6c;
+
+  transform: translateY(-2px);
 }
 
-/* ==========================
-TABLET
-========================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
   .self-header {
     flex-direction: column;
@@ -127,23 +166,47 @@ TABLET
   .self-header-right {
     width: 100%;
 
-    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
-/* ==========================
-MOBILE
-========================== */
 
 @media (max-width: 768px) {
 
+  .self-header {
+    padding: 22px;
+  }
+
+  .self-header-left {
+    min-width: auto;
+  }
+
   .self-header-left h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .self-header-right {
     width: 100%;
+  }
+}
 
+
+
+@media (max-width: 480px) {
+
+  .self-header {
+    padding: 18px;
+  }
+
+  .self-header-left h1 {
+    font-size: 22px;
+  }
+
+  .self-header-left p {
+    font-size: 13px;
+  }
+
+  .self-header-right {
     flex-direction: column;
 
     align-items: stretch;
@@ -153,19 +216,183 @@ MOBILE
   .primary-btn {
     width: 100%;
   }
+} */
+ 
+
+next
+
+.self-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 24px;
+
+  margin-bottom: 32px;
+
+  flex-wrap: wrap;
 }
 
-/* ==========================
-SMALL MOBILE
-========================== */
+.self-header-left {
+  flex: 1;
+  min-width: 320px;
+}
 
-@media (max-width: 480px) {
+.self-header-left h1 {
+  margin: 0;
+
+  color: #0f2f5f;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.self-header-left p {
+  margin-top: 12px;
+
+  color: #475569;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  max-width: 700px;
+}
+
+
+
+.self-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  height: 48px;
+
+  padding: 0 18px;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #1e3a5f;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.secondary-btn:hover {
+  background: #f8fafc;
+
+  border-color: #cbd5e1;
+}
+
+
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  height: 48px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #005bac;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 8px 18px rgba(0, 91, 172, 0.18);
+}
+
+.primary-btn:hover {
+  background: #004a8c;
+
+  transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .self-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .self-header-right {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .self-header-left {
+    min-width: auto;
+  }
 
   .self-header-left h1 {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .self-header-left p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
+
+
+@media (max-width: 480px) {
+
+  .self-header-right {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+  }
+
+  .self-header-left h1 {
+    font-size: 24px;
+  }
+} 
