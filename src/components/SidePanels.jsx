@@ -1,29 +1,23 @@
 import "./SidePanels.css";
 
-function SidePanels({ recentDocs }) {
+function SidePanels() {
   return (
     <aside className="side-panels">
 
       <div className="panel">
 
         <div className="panel-title-row">
-          <div>
-            <p className="panel-label">
-              Recent Documents
-            </p>
-          </div>
+          <h2>Help Center</h2>
         </div>
 
-        {recentDocs.slice(0, 5).map((doc) => (
-          <div
-            className="news-item"
-            key={doc.title}
-          >
-            <strong>{doc.title}</strong>
+        <p className="storage-note">
+          Need help with uploading,
+          fetching or sharing documents?
+        </p>
 
-            <p>{doc.subtitle}</p>
-          </div>
-        ))}
+        <button className="help-btn">
+          Visit Help Center
+        </button>
 
       </div>
 

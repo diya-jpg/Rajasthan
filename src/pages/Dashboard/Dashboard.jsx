@@ -1,52 +1,60 @@
 import "./Dashboard.css";
 import HeroSection from "../../components/HeroSection";
-// import RecentDocuments from "../../components/RecentDocuments";
+import DepartmentGrid from "../../components/DepartmentGrid";
 import SidePanels from "../../components/SidePanels";
+import RecentDocuments from "../../components/RecentDocuments";
+import DocumentCenter from "../../components/DocumentCenter";
+import { useState } from "react";
 
 import {
   FiFileText,
   FiUpload,
   FiSearch,
   FiShare2,
-   FiRefreshCw
+  FiRefreshCw
 } from "react-icons/fi";
 
 function Dashboard() {
 
- const actionCards = [
-  {
-    
-  title: "View Documents",
-  subtitle: "Access official documents",
+  const [selectedDepartment, setSelectedDepartment] =
+  useState(null);
 
-    icon: <FiFileText />,
-    iconClass: "icon-blue",
-  },
-  {
-    title: "Upload Document",
-    subtitle: "Upload your files",
-    icon: <FiUpload />,
-    iconClass: "icon-upload",
-  },
-  {
-    title: "Fetch Government Document",
-    subtitle: "Retrieve documents",
-    icon: <FiSearch />,
-    iconClass: "icon-green",
-  },
-  {
-    title: "Share Document",
-    subtitle: "Share securely",
-    icon: <FiShare2 />,
-    iconClass: "icon-share",
-  },
-  {
-    title: "Sync Digilocker",
-    subtitle: "Keep documents updated",
-    icon: <FiRefreshCw />,
-    iconClass: "icon-red",
-  },
-];
+const [selectedDocumentType, setSelectedDocumentType] =
+  useState(null);
+
+  const actionCards = [
+    {
+      title: "View Documents",
+      subtitle: "Access official documents",
+      icon: <FiFileText />,
+      iconClass: "icon-blue",
+    },
+    {
+      title: "Upload Document",
+      subtitle: "Upload your files",
+      icon: <FiUpload />,
+      iconClass: "icon-upload",
+    },
+    {
+      title: "Fetch Government Document",
+      subtitle: "Retrieve documents",
+      icon: <FiSearch />,
+      iconClass: "icon-green",
+    },
+    {
+      title: "Share Document",
+      subtitle: "Share securely",
+      icon: <FiShare2 />,
+      iconClass: "icon-share",
+    },
+    {
+      title: "Sync Digilocker",
+      subtitle: "Keep documents updated",
+      icon: <FiRefreshCw />,
+      iconClass: "icon-red",
+    },
+  ];
+
   const recentDocs = [
     {
       title: "12th Marksheet - RBSE",
@@ -74,9 +82,27 @@ function Dashboard() {
     <>
       <HeroSection actionCards={actionCards} />
 
-      <section className="dashboard-grid">
-        {/* <RecentDocuments recentDocs={recentDocs} /> */}
-        <SidePanels recentDocs={recentDocs} />
+      <section className="dashboard-main">
+
+       <div className="dashboard-left">
+
+  <DepartmentGrid
+    selectedDepartment={selectedDepartment}
+    setSelectedDepartment={setSelectedDepartment}
+  />
+
+  <DocumentCenter
+  selectedDepartment={selectedDepartment}
+/>
+</div>
+        <div className="dashboard-right">
+<RecentDocuments recentDocs={recentDocs} />
+          <SidePanels
+            recentDocs={recentDocs}
+          />
+
+        </div>
+
       </section>
     </>
   );

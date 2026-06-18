@@ -1,20 +1,257 @@
-.dashboard-page {
-  display: flex;
+/* ==========================
+DASHBOARD LAYOUT
+========================== */
 
+.dashboard-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    260px;
+
+  gap: 24px;
+
+  margin-top: 28px;
+
+  align-items: start;
+}
+
+.dashboard-left {
+  display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: 24px;
 
-  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* ==========================
+SECTION CARD
+========================== */
+
+.dashboard-section {
+  background: #ffffff;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-section-title {
+  margin: 0 0 22px;
+
+  color: #0f2f5f;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.dashboard-section-subtitle {
+  margin: -10px 0 20px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* ==========================
+DEPARTMENT GRID
+========================== */
+
+.department-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+
+  gap: 20px;
+}
+
+.department-card {
+  background: #ffffff;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 18px;
+
+  min-height: 150px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #7dbad4;
+
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.department-icon {
+  width: 72px;
+  height: 72px;
+
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  font-size: 34px;
+}
+
+.department-name {
+  color: #1e3a5f;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  white-space: normal;
+}
+
+/* ==========================
+DOCUMENT TYPES
+========================== */
+
+.doc-types {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.doc-type {
+  padding: 10px 18px;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.doc-type:hover {
+  background: #eef6fc;
+
+  border-color: #7dbad4;
+
+  color: #0b4b83;
+}
+
+.doc-type.active {
+  background: #0b4b83;
+
+  border-color: #0b4b83;
+
+  color: #ffffff;
+}
+
+/* ==========================
+TABLE WRAPPER
+========================== */
+
+.documents-wrapper {
+  background: #ffffff;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* ==========================
+LARGE LAPTOP
+========================== */
+
+@media (max-width: 1400px) {
+
+  .department-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ==========================
 TABLET
 ========================== */
 
-@media (max-width: 768px) {
-  .dashboard-page {
-    gap: 16px;
+@media (max-width: 1200px) {
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-right {
+    order: -1;
+  }
+
+  .department-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================
+SMALL TABLET
+========================== */
+
+@media (max-width: 900px) {
+
+  .department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .department-card {
+    min-height: 140px;
+  }
+
+  .department-icon {
+    width: 64px;
+    height: 64px;
+
+    font-size: 28px;
+  }
+
+  .department-name {
+    font-size: 16px;
   }
 }
 
@@ -22,8 +259,53 @@ TABLET
 MOBILE
 ========================== */
 
+@media (max-width: 768px) {
+
+  .dashboard-main {
+    gap: 18px;
+  }
+
+  .dashboard-section {
+    padding: 18px;
+  }
+
+  .department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================
+SMALL MOBILE
+========================== */
+
 @media (max-width: 480px) {
-  .dashboard-page {
-    gap: 14px;
+
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-card {
+    min-height: 120px;
+  }
+
+  .department-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 24px;
+  }
+
+  .department-name {
+    font-size: 15px;
+  }
+
+  .doc-types {
+    flex-direction: column;
+  }
+
+  .doc-type {
+    width: 100%;
+
+    text-align: center;
   }
 }

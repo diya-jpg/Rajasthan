@@ -1,69 +1,30 @@
-// import "./RecentDocuments.css";
-// import {
-//   FiFileText,
-//   FiEye,
-//   FiDownload,
-//   FiShare2,
-// } from "react-icons/fi";
+import "./RecentDocuments.css";
+import { FiEye } from "react-icons/fi";
 
-// function RecentDocuments({ recentDocs }) {
-//   return (
-//     <section className="recent-panel">
-//       <div className="panel-header">
-//         <h2>Recent Documents</h2>
+function RecentDocuments({ recentDocs }) {
+  return (
+    <div className="panel">
 
-//         <button className="link-button">
-//           View all →
-//         </button>
-//       </div>
+      <div className="panel-title-row">
+        <h2>Recent Documents</h2>
+      </div>
 
-//       <div className="document-list">
-//         {recentDocs.map((doc) => (
-//           <div
-//             key={doc.title}
-//             className="document-row"
-//           >
-//             <div className="document-left">
+      {recentDocs.slice(0, 5).map((doc) => (
+        <div
+          className="news-item"
+          key={doc.title}
+        >
+          <div>
+            <strong>{doc.title}</strong>
+            <p>{doc.date}</p>
+          </div>
 
-//               <div className="document-icon">
-//                 <FiFileText />
-//               </div>
+          <FiEye />
+        </div>
+      ))}
 
-//               <div className="document-content">
-//                 <p className="document-title">
-//                   {doc.title}
-//                 </p>
+    </div>
+  );
+}
 
-//                 <p className="document-subtitle">
-//                   {doc.subtitle}
-//                 </p>
-//               </div>
-
-//             </div>
-
-//             <div className="document-meta">
-//               <span>{doc.date}</span>
-
-//               <div className="doc-actions">
-//                 <button>
-//                   <FiEye />
-//                 </button>
-
-//                 <button>
-//                   <FiDownload />
-//                 </button>
-
-//                 <button>
-//                   <FiShare2 />
-//                 </button>
-//               </div>
-//             </div>
-
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default RecentDocuments;
+export default RecentDocuments;
