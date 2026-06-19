@@ -19,7 +19,7 @@ function RecentDocuments({ recentDocs }) {
             <p>{doc.date}</p>
           </div>
 
-          <FiEye />
+         <FiEye className="news-item-action" />
         </div>
       ))}
 

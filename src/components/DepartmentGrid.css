@@ -5,21 +5,13 @@ DEPARTMENT GRID
 .department-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 12px;
+  gap: 16px;
 }
 
 .department-card {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding: 12px 14px;
-
-  min-height: 82px;
+  padding: 14px;
 
   border: 1px solid #dbe5ef;
 
@@ -28,61 +20,102 @@ DEPARTMENT GRID
   background: #fff;
 
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
-.department-left {
+.department-card:hover {
+  border-color: #cbd5e1;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.department-top {
   display: flex;
 
   align-items: center;
 
   gap: 10px;
 
-  flex: 1;
+  margin-bottom: 8px;
 }
 
 .department-icon {
   width: 42px;
-  height: 42px;
 
-  flex-shrink: 0;
+  height: 42px;
 
   border-radius: 50%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   font-size: 18px;
+
+  flex-shrink: 0;
 }
 
-.department-info h4 {
-  margin: 0 0 2px;
+.department-title {
+  margin: 0;
 
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 600;
 
   color: #1e293b;
 }
 
-.department-info p {
+.department-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.department-description {
   margin: 0;
 
-  font-size: 10px;
+  font-size: 11px;
 
-  line-height: 1.25;
+  line-height: 1.4;
 
   color: #64748b;
 }
 
 .department-arrow {
-  margin-left: auto;
-
   font-size: 18px;
 
   color: #64748b;
 
   flex-shrink: 0;
+}
+
+.department-footer {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 18px;
+}
+
+.view-all-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
 }
 
 /* ==========================
@@ -150,17 +183,11 @@ MOBILE
     grid-template-columns: 1fr;
   }
 
-  .department-card {
-    height: auto;
-
-    min-height: 80px;
-  }
-
-  .department-info h4 {
+  .department-title {
     font-size: 13px;
   }
 
-  .department-info p {
+  .department-description {
     font-size: 10px;
   }
 }

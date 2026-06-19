@@ -335,7 +335,23 @@ ACTIONS
 
   gap: 8px;
 }
+.table-row,
+.recent-doc-item {
+  transition: all 0.25s ease;
 
+  cursor: pointer;
+}
+
+.table-row:hover,
+.recent-doc-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #7dbad4;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
 .table-actions button {
   width: 34px;
   height: 34px;
@@ -360,9 +376,39 @@ ACTIONS
 .table-actions button:hover {
   background: #eef6fc;
 
-  color: #0b4b83;
+  color: #2563eb;
+
+  transform: translateY(-1px);
+}
+.table-footer {
+  border-top: 1px solid #e2e8f0;
+
+  padding: 16px;
+
+  display: flex;
+
+  justify-content: center;
+
+  background: #ffffff;
 }
 
+.view-all-documents {
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.view-all-documents:hover {
+  color: #1d4ed8;
+}
 /* ==========================
 TABLET
 ========================== */

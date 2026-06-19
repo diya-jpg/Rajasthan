@@ -15,7 +15,19 @@ DASHBOARD LAYOUT
 
   align-items: start;
 }
+.top-section {
+  display: grid;
 
+  grid-template-columns: 4fr 1fr;
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+.bottom-section {
+  margin-top: 24px;
+}
 .dashboard-left {
   display: flex;
   flex-direction: column;

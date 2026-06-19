@@ -6,9 +6,7 @@ import {
   FiUsers,
   FiBriefcase,
   FiHeart,
-  FiHome,
-  FiGrid,
-  FiLayers
+  FiHome
 } from "react-icons/fi";
 
 function DepartmentGrid({
@@ -52,18 +50,6 @@ function DepartmentGrid({
       description: "Health records",
       icon: <FiHeart />,
       iconClass: "health-icon"
-    },
-    {
-      name: "SSO",
-      description: "SSO services",
-      icon: <FiGrid />,
-      iconClass: "sso-icon"
-    },
-    {
-      name: "Other",
-      description: "Other documents",
-      icon: <FiLayers />,
-      iconClass: "other-icon"
     }
   ];
 
@@ -90,7 +76,7 @@ function DepartmentGrid({
             }
           >
 
-            <div className="department-left">
+            <div className="department-top">
 
               <div
                 className={`department-icon ${item.iconClass}`}
@@ -98,23 +84,35 @@ function DepartmentGrid({
                 {item.icon}
               </div>
 
-              <div className="department-info">
-
-                <h4>{item.name}</h4>
-
-                <p>{item.description}</p>
-
-              </div>
+              <h4 className="department-title">
+                {item.name}
+              </h4>
 
             </div>
 
-            <div className="department-arrow">
-              →
+            <div className="department-bottom">
+
+              <p className="department-description">
+                {item.description}
+              </p>
+
+              <span className="department-arrow">
+                →
+              </span>
+
             </div>
 
           </div>
 
         ))}
+
+      </div>
+
+      <div className="department-footer">
+
+        <button className="view-all-btn">
+          View All →
+        </button>
 
       </div>
 

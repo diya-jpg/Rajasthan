@@ -4,6 +4,7 @@ import DepartmentGrid from "../../components/DepartmentGrid";
 import SidePanels from "../../components/SidePanels";
 import RecentDocuments from "../../components/RecentDocuments";
 import DocumentCenter from "../../components/DocumentCenter";
+
 import { useState } from "react";
 
 import {
@@ -71,39 +72,50 @@ const [selectedDocumentType, setSelectedDocumentType] =
       subtitle: "UIDAI Verified Document",
       date: "08 May 2026",
     },
-    {
-      title: "PAN Card",
-      subtitle: "Income Tax Department",
-      date: "05 May 2026",
-    },
+   {
+  title: "Jan Aadhaar Card",
+  subtitle: "Government of Rajasthan",
+  date: "04 May 2026",
+}
   ];
 
   return (
     <>
       <HeroSection actionCards={actionCards} />
 
-      <section className="dashboard-main">
+    <section className="top-section">
 
-       <div className="dashboard-left">
+  <div className="top-left">
+    <DepartmentGrid
+      selectedDepartment={selectedDepartment}
+      setSelectedDepartment={setSelectedDepartment}
+    />
+  </div>
 
-  <DepartmentGrid
-    selectedDepartment={selectedDepartment}
-    setSelectedDepartment={setSelectedDepartment}
-  />
+  <div className="top-right">
+    <RecentDocuments
+      recentDocs={recentDocs}
+    />
+  </div>
 
-  <DocumentCenter
-  selectedDepartment={selectedDepartment}
-/>
-</div>
-        <div className="dashboard-right">
-<RecentDocuments recentDocs={recentDocs} />
-          <SidePanels
-            recentDocs={recentDocs}
-          />
+</section>
 
-        </div>
+<section className="bottom-section">
 
-      </section>
+  {selectedDepartment ? (
+
+    <DocumentCenter
+      selectedDepartment={selectedDepartment}
+    />
+
+  ) :  (
+
+  <div className="empty-document-center"></div>
+
+)
+  }
+
+</section>
     </>
   );
 }

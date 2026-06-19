@@ -172,65 +172,73 @@ function DocumentCenter({ selectedDepartment }) {
 
         {filteredRows.map((doc, index) => (
 
-          <div
-            key={index}
-            className="table-row"
-          >
+  <div
+    key={index}
+    className="table-row"
+  >
 
-            <div className="document-info">
+    <div className="document-info">
 
-              <div className="document-icon">
-                <FiFileText />
-              </div>
+      <div className="document-icon">
+        <FiFileText />
+      </div>
 
-              <div>
+      <div>
 
-                <h4>{doc.name}</h4>
+        <h4>{doc.name}</h4>
 
-                <p>{doc.issuer}</p>
-
-              </div>
-
-            </div>
-
-            <div>
-              <span className="dept-badge">
-                {selectedDepartment}
-              </span>
-            </div>
-
-            <div>{doc.type}</div>
-
-            <div>{doc.date}</div>
-
-            <div className="table-actions">
-
-              <button>
-                <FiEye />
-              </button>
-
-              <button>
-                <FiDownload />
-              </button>
-
-              <button>
-                <FiShare2 />
-              </button>
-
-              <button>
-                <FiMoreVertical />
-              </button>
-
-            </div>
-
-          </div>
-
-        ))}
+        <p>{doc.issuer}</p>
 
       </div>
 
     </div>
-  );
+
+    <div>
+      <span className="dept-badge">
+        {selectedDepartment}
+      </span>
+    </div>
+
+    <div>{doc.type}</div>
+
+    <div>{doc.date}</div>
+
+    <div className="table-actions">
+
+      <button>
+        <FiEye />
+      </button>
+
+      <button>
+        <FiDownload />
+      </button>
+
+      <button>
+        <FiShare2 />
+      </button>
+
+      <button>
+        <FiMoreVertical />
+      </button>
+
+    </div>
+
+  </div>
+
+))}
+
+<div className="table-footer">
+
+  <button className="view-all-documents">
+    View All Documents →
+  </button>
+
+</div>
+
+</div>
+
+</div>
+);
 }
 
 export default DocumentCenter;

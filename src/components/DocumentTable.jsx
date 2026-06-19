@@ -30,52 +30,7 @@ function DocumentsTable({
         Documents
       </h2>
 
-      <div className="documents-table">
-
-        <div className="table-header">
-
-          <div>Document Name</div>
-          <div>Department</div>
-          <div>Issuer</div>
-          <div>Status</div>
-          <div>Updated</div>
-          <div>Action</div>
-
-        </div>
-
-        {documents.map((doc, index) => (
-
-          <div
-            key={index}
-            className="table-row"
-          >
-
-            <div>{doc.name}</div>
-
-            <div>{doc.department}</div>
-
-            <div>{doc.issuer}</div>
-
-            <div>
-              <span className="status-badge">
-                {doc.status}
-              </span>
-            </div>
-
-            <div>{doc.updated}</div>
-
-            <div>
-              <button className="view-btn">
-                View
-              </button>
-            </div>
-
-          </div>
-
-        ))}
-
-      </div>
-
+      
     </div>
 
   );
