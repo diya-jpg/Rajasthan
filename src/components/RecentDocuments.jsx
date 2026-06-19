@@ -3,7 +3,7 @@ import { FiEye } from "react-icons/fi";
 
 function RecentDocuments({ recentDocs }) {
   return (
-    <div className="panel">
+    <div className="recent-documents">
 
       <div className="panel-title-row">
         <h2>Recent Documents</h2>

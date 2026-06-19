@@ -117,7 +117,25 @@ DEPARTMENT GRID
 
   cursor: pointer;
 }
+.back-btn {
+  border: none;
 
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-bottom: 18px;
+}
+
+.back-btn:hover {
+  color: #1d4ed8;
+}
 /* ==========================
 ICON COLORS
 ========================== */

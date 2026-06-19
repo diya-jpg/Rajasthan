@@ -1,4 +1,5 @@
 import "./DepartmentGrid.css";
+import DocumentCenter from "./DocumentCenter";
 
 import {
   FiBook,
@@ -56,65 +57,90 @@ function DepartmentGrid({
   return (
     <div className="dashboard-section">
 
-      <h2 className="dashboard-section-title">
-        Browse by Department
-      </h2>
+      {!selectedDepartment ? (
 
-      <div className="department-grid">
+        <>
 
-        {departments.map((item) => (
+          <h2 className="dashboard-section-title">
+            Browse by Department
+          </h2>
 
-          <div
-            key={item.name}
-            className={
-              selectedDepartment === item.name
-                ? "department-card active"
-                : "department-card"
-            }
-            onClick={() =>
-              setSelectedDepartment(item.name)
-            }
-          >
+          <div className="department-grid">
 
-            <div className="department-top">
+            {departments.map((item) => (
 
               <div
-                className={`department-icon ${item.iconClass}`}
+                key={item.name}
+                className="department-card"
+                onClick={() =>
+                  setSelectedDepartment(item.name)
+                }
               >
-                {item.icon}
+
+                <div className="department-top">
+
+                  <div
+                    className={`department-icon ${item.iconClass}`}
+                  >
+                    {item.icon}
+                  </div>
+
+                  <h4 className="department-title">
+                    {item.name}
+                  </h4>
+
+                </div>
+
+                <div className="department-bottom">
+
+                  <p className="department-description">
+                    {item.description}
+                  </p>
+
+                  <span className="department-arrow">
+                    →
+                  </span>
+
+                </div>
+
               </div>
 
-              <h4 className="department-title">
-                {item.name}
-              </h4>
-
-            </div>
-
-            <div className="department-bottom">
-
-              <p className="department-description">
-                {item.description}
-              </p>
-
-              <span className="department-arrow">
-                →
-              </span>
-
-            </div>
+            ))}
 
           </div>
 
-        ))}
+          <div className="department-footer">
 
-      </div>
+            <button className="view-all-btn">
+              View All →
+            </button>
 
-      <div className="department-footer">
+          </div>
 
-        <button className="view-all-btn">
-          View All →
-        </button>
+        </>
 
-      </div>
+      ) : (
+
+        <>
+
+          <button
+            className="back-btn"
+            onClick={() =>
+              setSelectedDepartment(null)
+            }
+          >
+            ← Back to Departments
+          </button>
+
+          <DocumentCenter
+            selectedDepartment={
+              selectedDepartment
+            }
+          />
+
+        </>
+
+      )}
 
     </div>
   );

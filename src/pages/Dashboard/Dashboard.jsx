@@ -1,9 +1,7 @@
 import "./Dashboard.css";
 import HeroSection from "../../components/HeroSection";
 import DepartmentGrid from "../../components/DepartmentGrid";
-import SidePanels from "../../components/SidePanels";
 import RecentDocuments from "../../components/RecentDocuments";
-import DocumentCenter from "../../components/DocumentCenter";
 
 import { useState } from "react";
 
@@ -18,10 +16,7 @@ import {
 function Dashboard() {
 
   const [selectedDepartment, setSelectedDepartment] =
-  useState(null);
-
-const [selectedDocumentType, setSelectedDocumentType] =
-  useState(null);
+    useState(null);
 
   const actionCards = [
     {
@@ -72,50 +67,38 @@ const [selectedDocumentType, setSelectedDocumentType] =
       subtitle: "UIDAI Verified Document",
       date: "08 May 2026",
     },
-   {
-  title: "Jan Aadhaar Card",
-  subtitle: "Government of Rajasthan",
-  date: "04 May 2026",
-}
+    {
+      title: "Jan Aadhaar Card",
+      subtitle: "Government of Rajasthan",
+      date: "04 May 2026",
+    }
   ];
 
   return (
     <>
       <HeroSection actionCards={actionCards} />
 
-    <section className="top-section">
+      <section className="top-section">
 
-  <div className="top-left">
-    <DepartmentGrid
-      selectedDepartment={selectedDepartment}
-      setSelectedDepartment={setSelectedDepartment}
-    />
-  </div>
+        <div className="top-left">
 
-  <div className="top-right">
-    <RecentDocuments
-      recentDocs={recentDocs}
-    />
-  </div>
+          <DepartmentGrid
+            selectedDepartment={selectedDepartment}
+            setSelectedDepartment={setSelectedDepartment}
+          />
 
-</section>
+        </div>
 
-<section className="bottom-section">
+        <div className="top-right">
 
-  {selectedDepartment ? (
+          <RecentDocuments
+            recentDocs={recentDocs}
+          />
 
-    <DocumentCenter
-      selectedDepartment={selectedDepartment}
-    />
+        </div>
 
-  ) :  (
+      </section>
 
-  <div className="empty-document-center"></div>
-
-)
-  }
-
-</section>
     </>
   );
 }
