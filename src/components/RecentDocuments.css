@@ -1,0 +1,202 @@
+/* ==========================
+RECENT DOCUMENTS PANEL
+========================== */
+
+.recent-documents {
+  background: #ffffff;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* ==========================
+HEADER
+========================== */
+
+.panel-title-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.panel-label {
+  margin: 0;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #0f2f5f;
+}
+
+.view-all-link {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #2563eb;
+
+  text-decoration: none;
+}
+
+/* ==========================
+DOCUMENT ITEM
+========================== */
+
+.news-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex: 1;
+}
+
+/* ==========================
+DOCUMENT ICON
+========================== */
+
+.doc-icon {
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f3e8ff;
+
+  color: #7c3aed;
+
+  font-size: 18px;
+
+  flex-shrink: 0;
+}
+
+/* ==========================
+TEXT
+========================== */
+
+.news-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+.news-item p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+/* ==========================
+ACTION ICON
+========================== */
+
+.news-item-action {
+  font-size: 18px;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.news-item-action:hover {
+  color: #2563eb;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+  .recent-documents {
+    padding: 16px;
+  }
+
+  .panel-label {
+    font-size: 16px;
+  }
+
+  .doc-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 16px;
+  }
+
+  .news-item strong {
+    font-size: 13px;
+  }
+
+  .news-item p {
+    font-size: 11px;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .recent-documents {
+    padding: 14px;
+  }
+
+  .panel-label {
+    font-size: 15px;
+  }
+
+  .view-all-link {
+    font-size: 12px;
+  }
+
+  .news-item {
+    gap: 10px;
+  }
+}

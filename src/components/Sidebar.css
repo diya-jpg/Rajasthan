@@ -70,19 +70,22 @@ overflow: hidden;
 
   pointer-events: none;
 } */
- .sidebar::before {
+.sidebar::before {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   background-image:
     radial-gradient(
-      rgba(255,255,255,0.12) 1px,
+      rgba(255,255,255,0.10) 1px,
       transparent 1px
     );
 
   background-size: 18px 18px;
+
+  opacity: 1;
 
   pointer-events: none;
 }

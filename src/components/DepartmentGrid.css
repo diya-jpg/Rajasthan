@@ -1,5 +1,5 @@
 /* ==========================
-GRID
+DEPARTMENT GRID
 ========================== */
 
 .department-grid {
@@ -7,67 +7,82 @@ GRID
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 14px;
-
-  width: 100%;
+  gap: 12px;
 }
 
-/* ==========================
-CARD
-========================== */
-
 .department-card {
-  background: #ffffff;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 12px 14px;
+
+  min-height: 82px;
 
   border: 1px solid #dbe5ef;
 
-  border-radius: 16px;
+  border-radius: 12px;
 
-  padding: 14px;
+  background: #fff;
 
-  min-height: 95px;
+  cursor: pointer;
+}
 
+.department-left {
   display: flex;
 
-  flex-direction: column;
-
   align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
 
   gap: 10px;
 
-  cursor: pointer;
-
-  transition: all 0.25s ease;
+  flex: 1;
 }
-
-.department-card:hover {
-  transform: translateY(-2px);
-
-  border-color: #7dbad4;
-
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
-}
-
-/* ==========================
-ICON
-========================== */
 
 .department-icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border-radius: 14px;
+  font-size: 18px;
+}
 
-  font-size: 22px;
+.department-info h4 {
+  margin: 0 0 2px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #1e293b;
+}
+
+.department-info p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 1.25;
+
+  color: #64748b;
+}
+
+.department-arrow {
+  margin-left: auto;
+
+  font-size: 18px;
+
+  color: #64748b;
+
+  flex-shrink: 0;
 }
 
 /* ==========================
@@ -75,7 +90,7 @@ ICON COLORS
 ========================== */
 
 .education-icon {
-  background: #ede9fe;
+  background: #efe7ff;
   color: #7c3aed;
 }
 
@@ -90,7 +105,7 @@ ICON COLORS
 }
 
 .employment-icon {
-  background: #ccfbf1;
+  background: #d1fae5;
   color: #0f766e;
 }
 
@@ -105,90 +120,23 @@ ICON COLORS
 }
 
 .sso-icon {
-  background: #e0f2fe;
+  background: #dbeafe;
   color: #0284c7;
 }
 
 .other-icon {
-  background: #f1f5f9;
+  background: #e5e7eb;
   color: #475569;
-}
-
-/* ==========================
-TEXT
-========================== */
-
-.department-name {
-  color: #1e3a5f;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  line-height: 1.3;
-}
-
-/* ==========================
-ACTIVE
-========================== */
-
-.department-card.active {
-  border: 2px solid #0b4b83;
-
-  background: #f8fbff;
-}
-
-/* ==========================
-LARGE LAPTOP
-========================== */
-
-@media (max-width: 1400px) {
-
-  .department-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* ==========================
-LAPTOP
-========================== */
-
-@media (max-width: 1200px) {
-
-  .department-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .department-card {
-    min-height: 90px;
-  }
 }
 
 /* ==========================
 TABLET
 ========================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
   .department-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .department-card {
-    min-height: 85px;
-
-    padding: 12px;
-  }
-
-  .department-icon {
-    width: 44px;
-    height: 44px;
-
-    font-size: 20px;
-  }
-
-  .department-name {
-    font-size: 13px;
   }
 }
 
@@ -196,55 +144,23 @@ TABLET
 MOBILE
 ========================== */
 
-@media (max-width: 600px) {
-
-  .department-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-  }
-
-  .department-card {
-    min-height: 80px;
-
-    padding: 10px;
-  }
-
-  .department-icon {
-    width: 40px;
-    height: 40px;
-
-    font-size: 18px;
-  }
-
-  .department-name {
-    font-size: 12px;
-  }
-}
-
-/* ==========================
-SMALL MOBILE
-========================== */
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
   .department-grid {
     grid-template-columns: 1fr;
   }
 
   .department-card {
-    flex-direction: row;
+    height: auto;
 
-    justify-content: flex-start;
-
-    text-align: left;
-
-    min-height: auto;
-
-    gap: 12px;
+    min-height: 80px;
   }
 
-  .department-icon {
-    margin: 0;
+  .department-info h4 {
+    font-size: 13px;
+  }
+
+  .department-info p {
+    font-size: 10px;
   }
 }
