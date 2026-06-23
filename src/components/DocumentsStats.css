@@ -1,0 +1,147 @@
+.documents-stats {
+display: grid;
+
+grid-template-columns:
+repeat(5, 1fr);
+
+gap: 16px;
+}
+
+.stat-card {
+background: #ffffff;
+
+border: 1px solid #cae9f5;
+
+border-radius: 18px;
+
+padding: 22px;
+
+transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+transform: translateY(-2px);
+
+box-shadow:
+0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================
+TOP SECTION
+========================== */
+
+.stat-top {
+display: flex;
+
+align-items: center;
+
+gap: 14px;
+
+margin-bottom: 14px;
+}
+
+.stat-number {
+  color: #0b4b83;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* ==========================
+LABEL
+========================== */
+
+.stat-card p {
+margin: 0;
+
+color: #64748b;
+
+font-size: 14px;
+
+font-weight: 500;
+}
+
+/* ==========================
+ICONS
+========================== */
+
+.stat-icon {
+width: 52px;
+height: 52px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 14px;
+
+background: #eaf4fb;
+
+color: #0b4b83;
+
+font-size: 22px;
+
+flex-shrink: 0;
+}
+
+.stat-icon.government {
+background: #dcfce7;
+
+color: #15803d;
+}
+
+.stat-icon.upload {
+background: #ede9fe;
+
+color: #7c3aed;
+}
+
+.stat-icon.digi {
+background: #fef3c7;
+
+color: #d97706;
+}
+
+.stat-icon.storage {
+background: #dbeafe;
+
+color: #2563eb;
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+.documents-stats {
+grid-template-columns:
+repeat(3, 1fr);
+}
+
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+.documents-stats {
+grid-template-columns:
+repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 480px) {
+
+.documents-stats {
+grid-template-columns: 1fr;
+}
+
+}

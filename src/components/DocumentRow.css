@@ -1,0 +1,182 @@
+.document-row {
+display: grid;
+
+grid-template-columns:
+  3fr
+  2fr
+  1.5fr
+  1.2fr
+  1.5fr;
+
+gap: 20px;
+
+align-items: center;
+
+padding: 18px 24px;
+
+border-bottom: 1px solid #e2e8f0;
+
+transition: all 0.25s ease;
+}
+
+.document-row:hover {
+background: #f8fcfe;
+}
+
+.document-row:last-child {
+border-bottom: none;
+}
+
+/* ==========================
+DOCUMENT DETAILS
+========================== */
+
+.document-details {
+display: flex;
+
+align-items: center;
+
+gap: 14px;
+}
+
+.document-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eef5fb;
+
+  border-radius: 16px;
+
+  color: #0b4b83;
+
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+
+
+.document-info {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.document-info h4 {
+  margin: 0;
+}
+
+.document-info p {
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+/* ==========================
+CATEGORY / SOURCE / DATE
+========================== */
+
+.document-category,
+.document-source,
+.document-date {
+color: #475569;
+
+font-size: 14px;
+
+font-weight: 500;
+}
+
+/* ==========================
+ACTIONS
+========================== */
+
+.document-actions {
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+}
+
+.document-actions button {
+width: 42px;
+height: 42px;
+
+border: 1px solid #d9e5ee;
+
+border-radius: 12px;
+
+background: #ffffff;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+color: #334155;
+
+cursor: pointer;
+
+transition: all 0.2s ease;
+}
+
+.document-actions button:hover {
+background: #f8fbfd;
+
+border-color: #c7d7e5;
+
+transform: translateY(-2px);
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+.document-row {
+grid-template-columns: 1fr;
+
+gap: 12px;
+
+padding: 16px;
+
+
+}
+
+.document-actions {
+justify-content: flex-start;
+}
+
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+.document-row {
+padding: 14px;
+}
+
+.document-icon {
+width: 42px;
+height: 42px;
+}
+
+.document-info h4 {
+font-size: 14px;
+}
+
+.document-info p {
+font-size: 11px;
+}
+
+}

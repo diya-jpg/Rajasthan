@@ -2,131 +2,106 @@ import "./Sidebar.css";
 import logo from "../assets/raivault-logo.png";
 
 import {
-  FiGrid,
-  FiFileText,
-  FiUploadCloud,
-  FiHeart,
-  FiShare2,
-  FiDatabase
+FiGrid,
+FiFileText,
+FiShare2,
+FiDatabase
 } from "react-icons/fi";
 
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
-  return (
-    <aside className="sidebar">
+return ( <aside className="sidebar">
 
-      <div className="brand">
-        <img
-          src={logo}
-          alt="Raj eVault"
-          className="brand-logo"
-        />
-      </div>
 
-      <nav className="nav-menu">
+  <div className="brand">
+    <img
+      src={logo}
+      alt="Raj eVault"
+      className="brand-logo"
+    />
+  </div>
 
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) =>
-            `nav-item ${isActive ? "active" : ""}`
-          }
-        >
-          <span className="nav-icon">
-            <FiGrid />
-          </span>
+  <nav className="nav-menu">
 
-          <span>Dashboard</span>
-        </NavLink>
+    <NavLink
+      to="/"
+      end
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "active" : ""}`
+      }
+    >
+      <span className="nav-icon">
+        <FiGrid />
+      </span>
 
-        <NavLink
-          to="/government-documents"
-          className={({ isActive }) =>
-            `nav-item ${isActive ? "active" : ""}`
-          }
-        >
-          <span className="nav-icon">
-            <FiFileText />
-          </span>
+      <span>Dashboard</span>
+    </NavLink>
 
-          <span>Government Documents</span>
-        </NavLink>
+    <NavLink
+      to="/all-documents"
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "active" : ""}`
+      }
+    >
+      <span className="nav-icon">
+        <FiFileText />
+      </span>
 
-        <NavLink
-          to="/self-uploaded"
-          className={({ isActive }) =>
-            `nav-item ${isActive ? "active" : ""}`
-          }
-        >
-          <span className="nav-icon">
-            <FiUploadCloud />
-          </span>
+      <span>All Documents</span>
+    </NavLink>
 
-          <span>Self Uploaded</span>
-        </NavLink>
+    <NavLink
+      to="/shared-documents"
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "active" : ""}`
+      }
+    >
+      <span className="nav-icon">
+        <FiShare2 />
+      </span>
 
-        <NavLink
-          to="/digilocker"
-          className={({ isActive }) =>
-            `nav-item ${isActive ? "active" : ""}`
-          }
-        >
-          <span className="nav-icon">
-            <FiHeart />
-          </span>
-
-          <span>DigiLocker</span>
-        </NavLink>
-
-        <NavLink
-          to="/shared-documents"
-          className={({ isActive }) =>
-            `nav-item ${isActive ? "active" : ""}`
-          }
-        >
-          <span className="nav-icon">
-            <FiShare2 />
-          </span>
-
-          <span>Shared Documents</span>
-        </NavLink>
+      <span>Shared Documents</span>
+    </NavLink>
 
     <div className="storage-nav-section">
 
-  <div className="storage-nav-item">
-    <span className="nav-icon">
-      <FiDatabase />
-    </span>
+      <div className="storage-nav-item">
+        <span className="nav-icon">
+          <FiDatabase />
+        </span>
 
-    <span>Storage</span>
-  </div>
-
-  <div className="storage-progress-line">
-    <div className="storage-progress-fill"></div>
-  </div>
-
-  <div className="storage-info">
-    23.32 MB / 512 MB
-  </div>
-
-</div>
-      </nav>
-
-      <div className="sidebar-footer">
-
-        <div className="footer-security">
-          Secure · Verified · Private
-        </div>
-
-        <div className="footer-note">
-          Rajasthan Digital Vault
-        </div>
-
+        <span>Storage</span>
       </div>
 
-    </aside>
-  );
+      <div className="storage-progress-line">
+        <div className="storage-progress-fill"></div>
+      </div>
+
+      <div className="storage-info">
+        23.32 MB / 512 MB
+      </div>
+
+    </div>
+
+  </nav>
+
+  <div className="sidebar-footer">
+
+    <div className="footer-security">
+      Secure · Verified · Private
+    </div>
+
+    <div className="footer-note">
+      Rajasthan Digital Vault
+    </div>
+
+  </div>
+
+</aside>
+
+
+);
 }
 
 export default Sidebar;

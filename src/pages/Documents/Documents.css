@@ -1,0 +1,44 @@
+.documents-page {
+display: flex;
+flex-direction: column;
+
+gap: 20px;
+
+width: 100%;
+}
+
+/* ==========================
+LAPTOP
+========================== */
+
+@media (max-width: 1024px) {
+
+.documents-page {
+gap: 18px;
+}
+
+}
+
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+.documents-page {
+gap: 16px;
+}
+
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+.documents-page {
+gap: 14px;
+}
+
+}

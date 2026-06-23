@@ -6,103 +6,78 @@ import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
-import GovernmentDocuments from "./pages/GovernmentDocuments/GovernmentDocuments";
-import SelfUploaded from "./pages/SelfUploaded/SelfUploaded";
+import Documents from "./pages/Documents/Documents";
 import SharedDocuments from "./pages/SharedDocuments/SharedDocuments";
 
 function App() {
 
-  const governmentDocuments = [
-    {
-      title: "12th Marksheet - RBSE",
-      department: "Board of Secondary Education Rajasthan",
-      status: "Verified",
-      size: "820 KB",
-      date: "12 May 2026",
-    },
-    {
-      title: "Aadhaar Card",
-      department:
-        "Unique Identification Authority of India",
-      status: "Verified",
-      size: "450 KB",
-      date: "08 May 2026",
-    },
-    {
-      title: "PAN Card",
-      department: "Income Tax Department",
-      status: "Verified",
-      size: "320 KB",
-      date: "05 May 2026",
-    },
-    {
-      title: "Driving Licence",
-      department: "Transport Department Rajasthan",
-      status: "Verified",
-      size: "680 KB",
-      date: "02 May 2026",
-    },
-    {
-      title: "Birth Certificate",
-      department: "Civil Registration Department",
-      status: "Verified",
-      size: "390 KB",
-      date: "15 Apr 2026",
-    },
-  ];
+const documents = [
+{
+title: "12th Marksheet - RBSE",
+documentId: "RBSE-2026-001245",
+department: "Board of Secondary Education Rajasthan",
+date: "12 May 2026",
+source: "Government"
+},
+{
+title: "Aadhaar Card",
+documentId: "UIDAI-4587-XXXX",
+department: "UIDAI",
+date: "08 May 2026",
+source: "DigiLocker"
+},
+{
+title: "Resume.pdf",
+documentId: "DOC-001",
+department: "Self Uploaded",
+date: "05 May 2026",
+source: "Manually Uploaded"
+}
+];
 
-  return (
-    <div className="app-shell">
+return ( <div className="app-shell">
 
-      <Sidebar />
 
-      <main className="page-content">
+  <Sidebar />
 
-        <Topbar />
+  <main className="page-content">
 
-        <div className="content-main">
+    <Topbar />
 
-          <Routes>
+    <div className="content-main">
 
-            <Route
-              path="/"
-              element={<Dashboard />}
-            />
+      <Routes>
 
-            <Route
-              path="/government-documents"
-              element={
-                <GovernmentDocuments
-                  documents={governmentDocuments}
-                />
-              }
-            />
+        <Route
+          path="/"
+          element={<Dashboard />}
+        />
 
-            <Route
-              path="/self-uploaded"
-              element={<SelfUploaded />}
-            />
+       <Route
+  path="/all-documents"
+  element={
+    <Documents
+      documents={documents}
+    />
+  }
+/>
+        <Route
+          path="/shared-documents"
+          element={<SharedDocuments />}
+        />
 
-            <Route
-              path="/digilocker"
-              element={<h2>DigiLocker</h2>}
-            />
-
-            <Route
-              path="/shared-documents"
-              element={<SharedDocuments />}
-            />
-
-          </Routes>
-
-        </div>
-
-        <Footer />
-
-      </main>
+      </Routes>
 
     </div>
-  );
+
+    <Footer />
+
+  </main>
+
+</div>
+
+
+);
 }
 
 export default App;
