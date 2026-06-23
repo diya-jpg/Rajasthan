@@ -1,6 +1,8 @@
 .gov-row {
   display: grid;
 
+  
+
   grid-template-columns:
     3fr
     1fr
@@ -21,6 +23,7 @@
 
 .gov-row:hover {
   background: #f1f5f9;
+  
 }
 
 .gov-row:last-child {
