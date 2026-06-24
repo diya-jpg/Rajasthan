@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Documents from "./pages/Documents/Documents";
 import SharedDocuments from "./pages/SharedDocuments/SharedDocuments";
-
+import ActivityLog from "./pages/ActivityLog/ActivityLog";
+import Trash from "./pages/Trash/Trash";
 function App() {
 
 const documents = [
@@ -65,7 +66,15 @@ return ( <div className="app-shell">
           path="/shared-documents"
           element={<SharedDocuments />}
         />
-
+ 
+ <Route
+          path="/activity"
+          element={<ActivityLog />}
+        />
+ <Route
+          path="/trash"
+          element={<Trash />}
+        />
       </Routes>
 
     </div>

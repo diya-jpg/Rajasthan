@@ -7,7 +7,8 @@ FiFileText,
 FiShare2,
 FiDatabase
 } from "react-icons/fi";
-
+import { LuScrollText } from "react-icons/lu"; 
+import { VscTrash } from "react-icons/vsc";
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
@@ -48,7 +49,7 @@ return ( <aside className="sidebar">
         <FiFileText />
       </span>
 
-      <span>All Documents</span>
+      <span>My Documents</span>
     </NavLink>
 
     <NavLink
@@ -63,7 +64,33 @@ return ( <aside className="sidebar">
 
       <span>Shared Documents</span>
     </NavLink>
+        <NavLink
+      to="/activity"
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "active" : ""}`
+      }
+    >
+      <span className="nav-icon">
+        <LuScrollText/>
+      </span>
 
+      <span>Activity</span>
+      
+    </NavLink>
+    
+        <NavLink
+      to="/trash"
+      className={({ isActive }) =>
+        `nav-item ${isActive ? "active" : ""}`
+      }
+    >
+      <span className="nav-icon">
+        <VscTrash />
+      </span>
+
+      <span>Trash</span>
+      
+    </NavLink>
     <div className="storage-nav-section">
 
       <div className="storage-nav-item">
