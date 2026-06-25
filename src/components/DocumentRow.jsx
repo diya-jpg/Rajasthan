@@ -47,9 +47,13 @@ function DocumentRow({ doc }) {
           <FiEye />
         </button>
 
-        <button title="Download">
-          <FiDownload />
-        </button>
+       {doc.canDownload && (
+
+  <button title="Download">
+    <FiDownload />
+  </button>
+
+)}
 
         <button title="Share">
           <FiShare2 />

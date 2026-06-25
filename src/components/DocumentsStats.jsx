@@ -8,10 +8,19 @@ import {
   FiHardDrive
 } from "react-icons/fi";
 
-function DocumentsStats({ documents }) {
+function DocumentsStats({
 
-  const totalDocuments = documents.length;
+  totalCount,
 
+  govCount,
+
+  digiCount,
+
+  selfCount
+
+}) {
+
+ 
   return (
 
     <div className="documents-stats">
@@ -25,7 +34,7 @@ function DocumentsStats({ documents }) {
           </div>
 
           <span className="stat-number">
-            {totalDocuments}
+            {totalCount}
           </span>
 
         </div>
@@ -43,7 +52,7 @@ function DocumentsStats({ documents }) {
           </div>
 
           <span className="stat-number">
-            1
+            {govCount}
           </span>
 
         </div>
@@ -61,7 +70,7 @@ function DocumentsStats({ documents }) {
           </div>
 
           <span className="stat-number">
-            1
+            {selfCount}
           </span>
 
         </div>
@@ -79,7 +88,7 @@ function DocumentsStats({ documents }) {
           </div>
 
           <span className="stat-number">
-            1
+            {digiCount}
           </span>
 
         </div>

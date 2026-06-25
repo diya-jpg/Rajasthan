@@ -1,6 +1,6 @@
 import "./DocumentsHeader.css";
 
-function DocumentsHeader() {
+function DocumentsHeader({ onUploadClick }) {
 return ( <div className="documents-header">
 
 

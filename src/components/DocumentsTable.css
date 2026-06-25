@@ -10,7 +10,45 @@ overflow: hidden;
 box-shadow:
 0 6px 16px rgba(15, 23, 42, 0.05);
 }
+.empty-state {
 
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 80px 20px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  border: 1px solid #e2e8f0;
+
+  text-align: center;
+
+}
+
+.empty-state h2 {
+
+  color: #0b4b83;
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+}
+
+.empty-state p {
+
+  color: #64748b;
+
+  font-size: 15px;
+
+}
 .documents-table-header {
 display: grid;
 
