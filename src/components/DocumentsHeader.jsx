@@ -23,7 +23,7 @@ return ( <div className="documents-header">
       Fetch Government Document
     </button>
 
-    <button className="primary-btn">
+    <button className="primary-btn"onClick={onUploadClick}>
       Upload Document
     </button>
 

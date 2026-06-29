@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getDocuments }
 from "../../services/documentService";
 import UploadDocumentModal
-from "../../components/UploadDocumentModal";
+from "../UploadDocumentModal/UploadDocumentModal";
 import DocumentsHeader from "../../components/DocumentsHeader";
 import DocumentsFilters from "../../components/DocumentsFilters";
 import DocumentsStats from "../../components/DocumentsStats";
